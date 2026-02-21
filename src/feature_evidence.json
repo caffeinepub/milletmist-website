@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-hero-section-tagline-text-nourish-your-body-empower-communities-with-built-for-health-designed-for-impact-and-style-both-lines-in-black-color",
-      "featureTitle": "Replace the hero section tagline text 'Nourish Your Body, Empower Communities' with 'Built for Health, Designed for Impact' and style both lines in black color",
+      "featureId": "feature-significantly-increase-the-border-darkness-and-background-opacity-of-the-three-feature-pill-elements-100-natural-millets-women-led-farmer-support-in-the-hero-component-to-make-them-much-more-visible-and-prominent",
+      "featureTitle": "Significantly increase the border darkness and background opacity of the three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') in the Hero component to make them much more visible and prominent",
       "files": [
         "frontend/src/components/Hero.tsx"
       ],
@@ -15,25 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-36"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-replace-the-hero-section-description-text-premium-millet-based-protein-bars-and-energy-products-crafted-with-love-by-women-for-a-healthier-you-and-a-sustainable-future-with-premium-millet-based-products-crafted-with-love-and-care-by-women-for-a-healthier-you-and-a-sustainable-future-and-style-it-in-bold-white-color",
-      "featureTitle": "Replace the hero section description text 'Premium millet-based protein bars and energy products crafted with love by women, for a healthier you and a sustainable future.' with 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' and style it in bold white color",
-      "files": [
-        "frontend/src/components/Hero.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-37"
+        "REQ-39"
       ],
       "confidence": "high"
     }

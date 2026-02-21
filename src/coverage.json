@@ -1,29 +1,18 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-21T21:22:31.735Z",
+  "generatedAt": "2026-02-21T21:40:27.313Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-36",
-        "summary": "Replace the hero section tagline text 'Nourish Your Body, Empower Communities' with 'Built for Health, Designed for Impact' and style both lines in black color",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Hero.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Hero.tsx"
-        ]
-      },
-      {
-        "id": "REQ-37",
-        "summary": "Replace the hero section description text 'Premium millet-based protein bars and energy products crafted with love by women, for a healthier you and a sustainable future.' with 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' and style it in bold white color",
+        "id": "REQ-39",
+        "summary": "Significantly increase the border darkness and background opacity of the three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') in the Hero component to make them much more visible and prominent",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/Hero.tsx"

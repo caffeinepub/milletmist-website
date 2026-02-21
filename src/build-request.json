@@ -1,53 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Update hero section tagline and description text with new content and styling",
+  "title": "Further darken border and background of feature pills in hero section",
+  "projectName": "Raavni Agrobyte",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-36",
-      "text": "Replace the hero section tagline text 'Nourish Your Body, Empower Communities' with 'Built for Health, Designed for Impact' and style both lines in black color",
+      "id": "REQ-39",
+      "text": "Significantly increase the border darkness and background opacity of the three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') in the Hero component to make them much more visible and prominent",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-final"
+          "msg-last"
         ],
         "quotes": [
-          "in place of \"Nourish Your Body, Empower Communities\" put this \"Built for Health, Designed for Impact\" both line in Black color"
+          "Border and background of this \"100% Natural Millets, Women-Led, Farmer Support, make more and more darker"
         ]
       },
       "acceptanceCriteria": [
-        "The hero section displays 'Built for Health, Designed for Impact' as the tagline",
-        "Both lines of the tagline are rendered in black color",
-        "The previous tagline 'Nourish Your Body, Empower Communities' is completely replaced"
-      ]
-    },
-    {
-      "id": "REQ-37",
-      "text": "Replace the hero section description text 'Premium millet-based protein bars and energy products crafted with love by women, for a healthier you and a sustainable future.' with 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' and style it in bold white color",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-final"
-        ],
-        "quotes": [
-          "in place of \" Premium millet-based protein bars and energy products crafted with love by women, for a healthier you and a sustainable future.\" replace with \"Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.\" this one is in bold white color"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The hero section description displays 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.'",
-        "The description text is rendered in bold white color",
-        "The previous description text is completely replaced with the new content"
+        "The border of all three feature pills ('100% Natural Millets', 'Women-Led', 'Farmer Support') is significantly darker than the current implementation",
+        "The background opacity of all three feature pills is substantially increased for better visibility",
+        "All three pills maintain consistent styling with each other",
+        "The pills remain readable and visually distinct against the hero background image",
+        "The styling changes apply to both mobile and desktop viewports"
       ]
     }
   ],
   "constraints": [
-    "Do not modify the Hero component's layout or structure beyond text content and styling changes",
-    "Maintain all other existing hero section elements (background image, logo, CTA buttons, feature pills)"
+    "Do not modify the text content of the feature pills",
+    "Maintain the existing layout and positioning of the feature pills in the Hero component",
+    "Do not change the hero background image"
   ],
   "nonGoals": [
-    "Changing any other sections of the website",
-    "Modifying the hero section background or images",
-    "Altering navigation or footer components"
+    "Changing the color scheme of other hero section elements",
+    "Modifying the spacing or arrangement of the feature pills",
+    "Altering the hero section background image"
   ],
   "imageRequirements": {
     "required": [],

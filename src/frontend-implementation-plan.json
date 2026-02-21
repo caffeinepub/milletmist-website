@@ -1,37 +1,23 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update hero section tagline and description text with new content and styling",
+  "title": "Further darken border and background of feature pills in hero section",
   "requirements": [
     {
-      "id": "REQ-36",
-      "summary": "Replace hero section tagline with 'Built for Health, Designed for Impact' and style both lines in black color",
+      "id": "REQ-39",
+      "summary": "Significantly increase the border darkness and background opacity of the three feature pill elements in the Hero component to make them much more visible and prominent",
       "acceptanceCriteria": [
-        "The hero section displays 'Built for Health, Designed for Impact' as the tagline",
-        "Both lines of the tagline are rendered in black color",
-        "The previous tagline 'Nourish Your Body, Empower Communities' is completely replaced"
+        "The border of all three feature pills ('100% Natural Millets', 'Women-Led', 'Farmer Support') is significantly darker than the current implementation",
+        "The background opacity of all three feature pills is substantially increased for better visibility",
+        "All three pills maintain consistent styling with each other",
+        "The pills remain readable and visually distinct against the hero background image",
+        "The styling changes apply to both mobile and desktop viewports"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Update the hero section tagline text from 'Nourish Your Body, Empower Communities' to 'Built for Health, Designed for Impact' and apply black text color styling (text-black) to both lines of the heading. Preserve all other elements including background image, logo, feature pills, and CTA buttons."
-        }
-      ]
-    },
-    {
-      "id": "REQ-37",
-      "summary": "Replace hero section description with new text and style it in bold white color",
-      "acceptanceCriteria": [
-        "The hero section description displays 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.'",
-        "The description text is rendered in bold white color",
-        "The previous description text is completely replaced with the new content"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Hero.tsx",
-          "operation": "modify",
-          "description": "Update the hero section description text from 'Premium millet-based protein bars and energy products crafted with love by women, for a healthier you and a sustainable future.' to 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' and apply bold white color styling (font-bold text-white). Maintain the component structure without modifying layout, background, or other hero elements."
+          "description": "Modify the styling of the three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') to significantly darken their borders and increase their background opacity. Update the border color classes to use darker shades and increase the background opacity value to make the pills substantially more visible and prominent against the hero background image while maintaining readability and consistent styling across all three pills for both mobile and desktop viewports."
         }
       ]
     }

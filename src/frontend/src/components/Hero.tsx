@@ -50,15 +50,15 @@ const Hero = () => {
 
           {/* Feature Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-10 animate-fade-in">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/40 border-[3px] border-primary">
               <Leaf className="h-5 w-5 text-primary" />
               <span className="text-sm font-medium text-primary">100% Natural Millets</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/40 border-[3px] border-secondary">
               <Heart className="h-5 w-5 text-secondary" />
               <span className="text-sm font-medium text-secondary">Women-Led</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/40 border-[3px] border-accent">
               <Heart className="h-5 w-5 text-accent" />
               <span className="text-sm font-medium text-accent">Farmer Support</span>
             </div>

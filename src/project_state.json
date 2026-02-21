@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 23,
+  "projectStateVersion": 27,
   "summary": "Website for Raavni Agrobyte (OPC) Pvt. Ltd., featuring the Milletmist brand of protein bars and energy products, highlighting women leadership and support for ultra-poor millet farmers",
   "architectural_notes": [
     "Website project for food/nutrition company",
@@ -10,7 +10,7 @@
   "known_issues": [
     "Raavni Agrobyte logo not appearing in footer section"
   ],
-  "isFixRequest": true,
+  "isFixRequest": false,
   "existing_features": [
     {
       "id": "feature-create-a-hero-section-prominently-featuring-the-milletmist-brand-with-a-tagline-emphasizing-protein-bars-and-energy-products-made-from-millets",
@@ -251,6 +251,22 @@
         "REQ-37"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-increase-the-border-darkness-opacity-of-the-three-feature-pill-elements-100-natural-millets-women-led-farmer-support-in-the-hero-component-to-improve-visibility",
+      "title": "Increase the border darkness/opacity of the three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') in the Hero component to improve visibility",
+      "reqIds": [
+        "REQ-38"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-significantly-increase-the-border-darkness-and-background-opacity-of-the-three-feature-pill-elements-100-natural-millets-women-led-farmer-support-in-the-hero-component-to-make-them-much-more-visible-and-prominent",
+      "title": "Significantly increase the border darkness and background opacity of the three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') in the Hero component to make them much more visible and prominent",
+      "reqIds": [
+        "REQ-39"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -375,6 +391,12 @@
     {
       "id": "AR-31",
       "summary": "Replace hero section description with 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' in bold white color",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-33",
+      "summary": "Further darken border and background of '100% Natural Millets, Women-Led, Farmer Support' feature pills in hero section",
       "reqIds": [],
       "status": "pending"
     }

@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Update the hero section text content and styling to reflect new brand messaging.
+**Goal:** Increase visibility of feature pills in the hero section by darkening their borders and backgrounds.
 
 **Planned changes:**
-- Replace hero tagline with "Built for Health, Designed for Impact" and style in black color
-- Replace hero description with "Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future." and style in bold white color
+- Significantly darken the border color of the three feature pills ('100% Natural Millets', 'Women-Led', 'Farmer Support')
+- Substantially increase the background opacity of all three feature pills
+- Ensure consistent styling across all three pills
 
-**User-visible outcome:** The hero section displays updated tagline and description text with the specified styling, maintaining all other existing elements and layout.
+**User-visible outcome:** The feature pills in the hero section will be much more visible and prominent against the background image, making the key messaging easier to read.
