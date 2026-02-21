@@ -1,93 +1,63 @@
 {
   "kind": "build_request",
-  "title": "Fix hero typography animation and update Core Team founder profile",
-  "priority": "normal",
+  "title": "Replace founder profile image with uploaded BarnaliC.png",
+  "priority": "high",
   "requirements": [
     {
-      "id": "REQ-45",
-      "text": "Fix the typography animation on the hero section description text 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' to ensure the fade-in and slide-up animation plays correctly on page load",
+      "id": "REQ-59",
+      "text": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliC.png image, maintaining 400x400 dimensions to match existing team member images",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-latest"
         ],
         "quotes": [
-          "as give above command typography animation not working fix it"
+          "I'm attaching another image.. please replace with this existing founder and ceo image... crosscheck before final result"
         ]
       },
       "acceptanceCriteria": [
-        "The hero section description text displays a smooth fade-in and slide-up animation when the page loads",
-        "The animation plays once on initial page load",
-        "The animation timing and easing create a polished, professional effect"
+        "The CoreTeam component displays the BarnaliC.dim_400x400.png image for Barnali Chakraborty's profile",
+        "The image dimensions are exactly 400x400 pixels",
+        "The image path references frontend/public/assets/generated/BarnaliC.dim_400x400.png",
+        "Aggressive cache-busting timestamp query parameter is applied to force immediate browser reload",
+        "The uploaded BarnaliC.png photo is used without AI generation or modification"
       ]
     },
     {
-      "id": "REQ-46",
-      "text": "Replace the founder profile image in the Core Team section with the uploaded barnali.jpeg image, maintaining the same dimensions as the existing team member images",
+      "id": "REQ-60",
+      "text": "Render the uploaded BarnaliC.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-latest"
         ],
         "quotes": [
-          "in the core team section please change the image of founder in the same size of existing image with the above attached image"
+          "I'm attaching another image.. please replace with this existing founder and ceo image"
         ]
       },
       "acceptanceCriteria": [
-        "The founder profile displays the barnali.jpeg image",
-        "The image dimensions match the other team member profile images",
-        "The image displays clearly without distortion or quality loss"
-      ]
-    },
-    {
-      "id": "REQ-47",
-      "text": "Change the founder name in the Core Team section from 'Riya Sharma' to 'Barnali Chakraborty'",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ],
-        "quotes": [
-          "set name \"Barnali Chakraborty\" in place of \"Riya Sharma\""
-        ]
-      },
-      "acceptanceCriteria": [
-        "The founder profile displays 'Barnali Chakraborty' as the name",
-        "The name formatting and styling matches other team member names"
-      ]
-    },
-    {
-      "id": "REQ-48",
-      "text": "Update the founder description in the Core Team section to replace '15+' with '10' years of experience",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ],
-        "quotes": [
-          "in the given description please put 10 in place of 15+"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The founder description shows '10' instead of '15+' years of experience",
-        "The description text remains coherent and grammatically correct"
+        "The BarnaliC.png image is processed and saved as BarnaliC.dim_400x400.png in frontend/public/assets/generated",
+        "The image is resized to exactly 400x400 pixels while maintaining aspect ratio",
+        "The exact uploaded photo is used without AI generation"
       ]
     }
   ],
   "constraints": [
-    "Do not modify the backend main.mo file",
-    "Maintain the same image dimensions and styling for all team member profiles in the Core Team section",
-    "Preserve the existing animation styles and Tailwind configuration"
+    "Use the exact uploaded BarnaliC.png image without generating a new AI image",
+    "Maintain 400x400 dimensions to match other team member images",
+    "Implement aggressive cache-busting to prevent browser caching issues",
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts or other immutable paths"
   ],
   "nonGoals": [
-    "Changing other team member profiles",
-    "Modifying the Core Team section layout or structure",
-    "Updating any other sections of the website"
+    "Changing any other team member images",
+    "Modifying the CoreTeam component layout or structure",
+    "Updating founder name or description text",
+    "Generating AI-created images"
   ],
   "imageRequirements": {
-    "required": [
-      "Professional portrait photo for Barnali Chakraborty founder profile, matching the style and dimensions of existing team member images (barnali-founder.dim_400x400.png)"
-    ],
-    "edits": []
+    "required": [],
+    "edits": [
+      "Resize the uploaded BarnaliC.png to 400x400 dimensions (BarnaliC.png > BarnaliC.dim_400x400.png)"
+    ]
   }
 }

@@ -1,12 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Fix hero section typography animation and update founder profile in Core Team section with correct name, image, and experience details.
+**Goal:** Replace the founder profile image with the uploaded BarnaliC.png photo.
 
 **Planned changes:**
-- Fix the fade-in and slide-up animation on the hero section description text to play correctly on page load
-- Replace the founder profile image with the uploaded barnali.jpeg image, maintaining 400x400 dimensions
-- Change the founder name from "Riya Sharma" to "Barnali Chakraborty"
-- Update the founder description to show "10" years of experience instead of "15+"
+- Replace Barnali Chakraborty's profile image in the Core Team section with the uploaded BarnaliC.png
+- Resize the uploaded image to 400x400 dimensions to match other team member images
+- Apply aggressive cache-busting to force immediate browser reload
 
-**User-visible outcome:** The hero section description text animates smoothly on page load, and the Core Team section displays the correct founder profile with Barnali Chakraborty's image, name, and updated experience details.
+**User-visible outcome:** The Core Team section displays the new founder profile photo with proper dimensions and immediate visibility.

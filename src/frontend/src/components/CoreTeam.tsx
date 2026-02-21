@@ -2,11 +2,14 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Linkedin } from 'lucide-react';
 
 const CoreTeam = () => {
+  // Cache-busting timestamp to ensure fresh images load
+  const cacheBuster = Date.now();
+  
   const teamMembers = [
     {
       name: 'Barnali Chakraborty',
       role: 'Founder & CEO',
-      image: '/assets/generated/barnali-founder.dim_400x400.png',
+      image: `/assets/generated/BarnaliC.dim_400x400.png?v=${cacheBuster}`,
       description: 'Visionary leader with 10 years in sustainable agriculture and women empowerment initiatives.'
     },
     {
@@ -16,10 +19,10 @@ const CoreTeam = () => {
       description: 'Expert in supply chain management and ethical sourcing, ensuring quality at every step.'
     },
     {
-      name: 'Meera Patel',
+      name: 'Madhumita Mallick',
       role: 'Product Development Lead',
-      image: '/assets/generated/team-member-3.dim_400x400.png',
-      description: 'Nutritionist and food scientist passionate about creating healthy, delicious millet-based products.'
+      image: '/assets/generated/madhumita-mallick.dim_400x400.png',
+      description: 'Nutritionist and food Expert passionate about creating healthy, delicious millet-based products.'
     },
     {
       name: 'Kavita Reddy',

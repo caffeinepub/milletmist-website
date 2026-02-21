@@ -1,77 +1,39 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Fix hero typography animation and update Core Team founder profile",
+  "title": "Replace founder profile image with uploaded BarnaliC.png",
   "requirements": [
     {
-      "id": "REQ-45",
-      "summary": "Fix the typography animation on the hero section description text to ensure the fade-in and slide-up animation plays correctly on page load",
+      "id": "REQ-59",
+      "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliC.png image, maintaining 400x400 dimensions",
       "acceptanceCriteria": [
-        "The hero section description text displays a smooth fade-in and slide-up animation when the page loads",
-        "The animation plays once on initial page load",
-        "The animation timing and easing create a polished, professional effect"
+        "The CoreTeam component displays the BarnaliC.dim_400x400.png image for Barnali Chakraborty's profile",
+        "The image dimensions are exactly 400x400 pixels",
+        "The image path references frontend/public/assets/generated/BarnaliC.dim_400x400.png",
+        "Aggressive cache-busting timestamp query parameter is applied to force immediate browser reload",
+        "The uploaded BarnaliC.png photo is used without AI generation or modification"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Hero.tsx",
+          "path": "frontend/src/components/CoreTeam.tsx",
           "operation": "modify",
-          "description": "Review the current implementation of the hero description text animation and fix the fade-in and slide-up animation to ensure it triggers correctly on page load. Add or update animation classes using Tailwind's animate utilities (animate-fade-in or similar) and ensure proper animation delay/duration settings. The description text 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' should have smooth fade-in and slide-up effects that play once on initial render."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Review and ensure the custom animation definitions for fade-in and slide-up effects are properly configured. Verify that keyframes and animation utilities referenced in Hero.tsx are defined with appropriate timing functions and durations for a polished, professional effect."
+          "description": "Update the founder profile image path from BarnaliChakrborty.dim_400x400.png to BarnaliC.dim_400x400.png for Barnali Chakraborty's team member card. Maintain the existing cache-busting timestamp query parameter pattern to ensure immediate browser reload of the new image. The image reference should use the workspace path frontend/public/assets/generated/BarnaliC.dim_400x400.png."
         }
       ]
     },
     {
-      "id": "REQ-46",
-      "summary": "Replace the founder profile image in the Core Team section with the uploaded barnali.jpeg image",
+      "id": "REQ-60",
+      "summary": "Render the uploaded BarnaliC.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
       "acceptanceCriteria": [
-        "The founder profile displays the barnali.jpeg image",
-        "The image dimensions match the other team member profile images",
-        "The image displays clearly without distortion or quality loss"
+        "The BarnaliC.png image is processed and saved as BarnaliC.dim_400x400.png in frontend/public/assets/generated",
+        "The image is resized to exactly 400x400 pixels while maintaining aspect ratio",
+        "The exact uploaded photo is used without AI generation"
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/barnali-founder.dim_400x400.png",
+          "path": "frontend/public/assets/generated/BarnaliC.dim_400x400.png",
           "operation": "create",
-          "description": "Add the generated founder profile image barnali-founder.dim_400x400.png to the assets directory. This image will be used to replace the existing founder profile image in the Core Team section, matching the 400x400 dimensions of other team member images."
-        },
-        {
-          "path": "frontend/src/components/CoreTeam.tsx",
-          "operation": "modify",
-          "description": "Update the founder team member profile to use the new image at frontend/public/assets/generated/barnali-founder.dim_400x400.png. Ensure the image source path is correctly referenced and that the image dimensions and styling match the other team member profiles (400x400 size). Verify the image displays without distortion or quality loss."
-        }
-      ]
-    },
-    {
-      "id": "REQ-47",
-      "summary": "Change the founder name in the Core Team section from 'Riya Sharma' to 'Barnali Chakraborty'",
-      "acceptanceCriteria": [
-        "The founder profile displays 'Barnali Chakraborty' as the name",
-        "The name formatting and styling matches other team member names"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/CoreTeam.tsx",
-          "operation": "modify",
-          "description": "Update the founder team member profile name from 'Riya Sharma' to 'Barnali Chakraborty'. Ensure the name formatting and styling matches the other team member names in the section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-48",
-      "summary": "Update the founder description in the Core Team section to replace '15+' with '10' years of experience",
-      "acceptanceCriteria": [
-        "The founder description shows '10' instead of '15+' years of experience",
-        "The description text remains coherent and grammatically correct"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/CoreTeam.tsx",
-          "operation": "modify",
-          "description": "Update the founder team member description to change '15+' to '10' years of experience. Review the full description text to ensure it remains coherent and grammatically correct after the change."
+          "description": "Process the uploaded BarnaliC.png image and save it as a 400x400 pixel static asset at frontend/public/assets/generated/BarnaliC.dim_400x400.png. Resize the image to exactly 400x400 dimensions while maintaining aspect ratio. This is the exact uploaded photo that will replace the existing founder profile image in the CoreTeam component."
         }
       ]
     }
