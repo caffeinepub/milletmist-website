@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 7,
   "summary": "Website for Raavni Agrobyte (OPC) Pvt. Ltd., featuring the Milletmist brand of protein bars and energy products, highlighting women leadership and support for ultra-poor millet farmers",
   "architectural_notes": [
     "Website project for food/nutrition company",
@@ -9,7 +9,7 @@
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Professional portrait photo of a woman team member with warm, natural lighting and neutral background for founder/CEO profile (team-member-1.dim_400x400.png)\n- Professional portrait photo of a woman team member with warm, natural lighting and neutral background for operations lead profile (team-member-2.dim_400x400.png)\n- Professional portrait photo of a woman team member with warm, natural lighting and neutral background for product development lead profile (team-member-3.dim_400x400.png)\n- Professional portrait photo of a woman team member with warm, natural lighting and neutral background for farmer relations coordinator profile (team-member-4.dim_400x400.png)",
+  "imageRequirements": "## Required Images\n- Professional logo design for Milletmist brand featuring millet grains and organic elements in warm earth tones (terracotta, amber, sage green), suitable for both light and dark backgrounds, modern and clean aesthetic (milletmist-logo.dim_400x400.png)",
   "existing_features": [
     {
       "id": "feature-create-a-hero-section-prominently-featuring-the-milletmist-brand-with-a-tagline-emphasizing-protein-bars-and-energy-products-made-from-millets",
@@ -113,6 +113,28 @@
       "id": "AR-5",
       "summary": "Core team section displaying team members",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Replace website logo with custom logo",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Replace the existing Milletmist website logo with a new custom logo design",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Render the generated custom logo as a static asset from frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-11"
+      ],
       "status": "pending"
     }
   ],

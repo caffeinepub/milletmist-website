@@ -1,12 +1,13 @@
 # Specification
 
 ## Summary
-**Goal:** Add a Core Team section to showcase the women-led team of Raavni Agrobyte (OPC) Pvt. Ltd.
+**Goal:** Replace the existing Milletmist logo with a new custom design across all website components.
 
 **Planned changes:**
-- Create a new CoreTeam section component with team member cards displaying profile images, names, roles, and descriptions
-- Integrate the section into the main page with the existing earthy design aesthetic
-- Add a 'Team' navigation link that scrolls to the Core Team section
-- Generate professional portrait photos for four team members
+- Generate a new custom Milletmist logo with millet grains and organic elements in warm earth tones
+- Update the Navigation component to use the new logo
+- Update the Hero section to use the new logo
+- Update the Footer component to use the new logo
+- Ensure logo works correctly on both light and dark backgrounds
 
-**User-visible outcome:** Users can view the core team members with their photos, roles, and descriptions in a new section on the website, accessible via the navigation menu.
+**User-visible outcome:** Users will see a refreshed, professionally designed Milletmist logo throughout the website that better represents the brand's organic and millet-focused identity.

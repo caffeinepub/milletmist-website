@@ -1,43 +1,4 @@
 {
   "kind": "feature_evidence_report",
-  "features": [
-    {
-      "featureId": "feature-create-a-core-team-section-component-that-displays-team-members-of-raavni-agrobyte-opc-pvt-ltd-emphasizing-the-women-led-nature-of-the-organization-with-individual-team-member-profiles-including-photos-names-roles-and-brief-descriptions",
-      "featureTitle": "Create a 'Core Team' section component that displays team members of Raavni Agrobyte (OPC) Pvt. Ltd., emphasizing the women-led nature of the organization with individual team member profiles including photos, names, roles, and brief descriptions",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/CoreTeam.tsx",
-        "frontend/src/components/Navigation.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-8"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-render-generated-team-member-profile-images-as-static-assets-from-frontend-public-assets-generated-directory",
-      "featureTitle": "Render generated team member profile images as static assets from frontend/public/assets/generated directory",
-      "files": [
-        "frontend/src/components/CoreTeam.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-9"
-      ],
-      "confidence": "high"
-    }
-  ]
+  "features": []
 }

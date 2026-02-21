@@ -1,56 +1,45 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-21T18:24:04.022Z",
+  "generatedAt": "2026-02-21T19:41:51.335Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
     "total": 2,
-    "implemented": 2,
+    "implemented": 0,
     "items": [
       {
-        "id": "REQ-8",
-        "summary": "Create a 'Core Team' section component that displays team members of Raavni Agrobyte (OPC) Pvt. Ltd., emphasizing the women-led nature of the organization with individual team member profiles including photos, names, roles, and brief descriptions",
-        "status": "implemented",
+        "id": "REQ-10",
+        "summary": "Replace the existing Milletmist website logo with a new custom logo design",
+        "status": "missing",
         "plannedFiles": [
-          "frontend/src/components/CoreTeam.tsx",
-          "frontend/src/App.tsx",
-          "frontend/src/components/Navigation.tsx"
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/components/Footer.tsx"
         ],
-        "matchedFiles": [
-          "frontend/src/components/CoreTeam.tsx",
-          "frontend/src/App.tsx",
-          "frontend/src/components/Navigation.tsx"
-        ]
+        "matchedFiles": []
       },
       {
-        "id": "REQ-9",
-        "summary": "Render generated team member profile images as static assets from frontend/public/assets/generated directory",
-        "status": "implemented",
+        "id": "REQ-11",
+        "summary": "Render the generated custom logo as a static asset from frontend/public/assets/generated directory",
+        "status": "missing",
         "plannedFiles": [
-          "frontend/src/components/CoreTeam.tsx"
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/components/Footer.tsx"
         ],
-        "matchedFiles": [
-          "frontend/src/components/CoreTeam.tsx"
-        ]
+        "matchedFiles": []
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/team-member-1.dim_400x400.png",
-    "frontend/public/assets/generated/team-member-2.dim_400x400.png",
-    "frontend/public/assets/generated/team-member-3.dim_400x400.png",
-    "frontend/public/assets/generated/team-member-4.dim_400x400.png",
-    "frontend/src/App.tsx",
-    "frontend/src/components/CoreTeam.tsx",
-    "frontend/src/components/Navigation.tsx",
+    "frontend/public/assets/generated/milletmist-logo.dim_400x400.png",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

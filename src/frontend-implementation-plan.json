@@ -1,49 +1,59 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add core team section",
+  "title": "Replace website logo with custom design",
   "requirements": [
     {
-      "id": "REQ-8",
-      "summary": "Create a 'Core Team' section component that displays team members of Raavni Agrobyte (OPC) Pvt. Ltd., emphasizing the women-led nature of the organization with individual team member profiles",
+      "id": "REQ-10",
+      "summary": "Replace the existing Milletmist website logo with a new custom logo design across all components",
       "acceptanceCriteria": [
-        "Core Team section is visually integrated with the existing earthy, organic design aesthetic using warm earth tones (terracotta, amber, sage green)",
-        "Section displays multiple team member cards with profile images, names, and roles",
-        "Layout is responsive and works on mobile, tablet, and desktop devices",
-        "Section is added to the main App.tsx component in the appropriate position within the page flow",
-        "Navigation menu is updated to include a 'Team' link that scrolls to the core team section"
+        "New logo replaces the current logo in the Navigation component",
+        "New logo replaces the current logo in the Hero section",
+        "New logo replaces the current logo in the Footer component",
+        "Logo maintains consistent sizing and positioning across all components",
+        "Logo works correctly on both light and dark backgrounds where applicable"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/CoreTeam.tsx",
-          "operation": "create",
-          "description": "Create a CoreTeam component that displays team member profiles in a responsive grid layout. Include four team member cards showcasing the women-led nature of the organization. Each card should display a profile image, name, role, and brief description. Use the existing design system with OKLCH color variables and warm earth tones (terracotta, amber, sage green) to maintain visual consistency with AboutUs.tsx, Products.tsx, and FarmerSupport.tsx components. Follow the established component structure pattern with semantic HTML, Tailwind CSS classes, and responsive breakpoints for mobile, tablet, and desktop views."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import the CoreTeam component and add it to the page layout between the AboutUs section and the Products section. Wrap it in a semantic section element with an appropriate id attribute for smooth scrolling navigation. Ensure the component follows the existing page flow and maintains consistent spacing with other sections."
-        },
-        {
           "path": "frontend/src/components/Navigation.tsx",
           "operation": "modify",
-          "description": "Add a 'Team' navigation link to both the desktop and mobile menu arrays. Configure the link to scroll smoothly to the core team section when clicked. Update the active section highlighting logic to include the team section, ensuring visual feedback when users scroll to or click the team navigation item. Maintain the existing scroll detection and styling pattern used for other navigation links."
+          "description": "Update the logo image source to reference the generated logo asset at frontend/public/assets/generated/milletmist-logo.dim_400x400.png. Ensure the logo maintains its current sizing and positioning within the navigation bar, and verify it works correctly with the scroll detection styling changes."
+        },
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Update the logo image source to reference the generated logo asset at frontend/public/assets/generated/milletmist-logo.dim_400x400.png. Ensure the logo maintains its current sizing and positioning within the hero section layout, and verify it displays correctly against the background image."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the logo image source to reference the generated logo asset at frontend/public/assets/generated/milletmist-logo.dim_400x400.png. Ensure the logo maintains its current sizing and positioning within the footer layout alongside the company name and copyright information."
         }
       ]
     },
     {
-      "id": "REQ-9",
-      "summary": "Render generated team member profile images as static assets from frontend/public/assets/generated directory",
+      "id": "REQ-11",
+      "summary": "Render the generated custom logo as a static asset from frontend/public/assets/generated directory",
       "acceptanceCriteria": [
-        "Team member images are loaded from the frontend/public/assets/generated folder",
-        "Images are properly sized and optimized for web display",
-        "Fallback handling is implemented if images fail to load"
+        "Logo file is referenced from frontend/public/assets/generated path",
+        "Logo displays correctly in all locations where it appears",
+        "No routing through backend for logo asset delivery"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/CoreTeam.tsx",
+          "path": "frontend/src/components/Navigation.tsx",
           "operation": "modify",
-          "description": "Update the CoreTeam component to reference the four generated team member profile images using their exact workspace paths: frontend/public/assets/generated/team-member-1.dim_400x400.png (founder/CEO), frontend/public/assets/generated/team-member-2.dim_400x400.png (operations lead), frontend/public/assets/generated/team-member-3.dim_400x400.png (product development lead), and frontend/public/assets/generated/team-member-4.dim_400x400.png (farmer relations coordinator). Configure img elements with appropriate alt text, sizing attributes (400x400), and CSS classes for consistent display. Implement fallback handling using onError event handlers or placeholder logic to gracefully handle image loading failures. Ensure images are responsive and maintain aspect ratio across different screen sizes."
+          "description": "Ensure the logo src attribute uses the relative path /assets/generated/milletmist-logo.dim_400x400.png which references the static asset from the public directory without backend routing. Verify the image loads correctly and add appropriate alt text for accessibility."
+        },
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Ensure the logo src attribute uses the relative path /assets/generated/milletmist-logo.dim_400x400.png which references the static asset from the public directory without backend routing. Verify the image loads correctly and add appropriate alt text for accessibility."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Ensure the logo src attribute uses the relative path /assets/generated/milletmist-logo.dim_400x400.png which references the static asset from the public directory without backend routing. Verify the image loads correctly and add appropriate alt text for accessibility."
         }
       ]
     }
