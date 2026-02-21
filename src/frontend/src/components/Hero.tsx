@@ -2,8 +2,8 @@ import { ArrowRight, Leaf, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
-  const scrollToProducts = () => {
-    const element = document.getElementById('products');
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
@@ -50,17 +50,17 @@ const Hero = () => {
 
           {/* Feature Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-10 animate-fade-in">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/40 border-[3px] border-primary">
-              <Leaf className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium text-primary">100% Natural Millets</span>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/80 border-[3px] border-primary">
+              <Leaf className="h-5 w-5 text-white" />
+              <span className="text-sm font-medium text-white">100% Natural Millets</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/40 border-[3px] border-secondary">
-              <Heart className="h-5 w-5 text-secondary" />
-              <span className="text-sm font-medium text-secondary">Women-Led</span>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/80 border-[3px] border-secondary">
+              <Heart className="h-5 w-5 text-white" />
+              <span className="text-sm font-medium text-white">Women-Led</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/40 border-[3px] border-accent">
-              <Heart className="h-5 w-5 text-accent" />
-              <span className="text-sm font-medium text-accent">Farmer Support</span>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/80 border-[3px] border-accent">
+              <Heart className="h-5 w-5 text-white" />
+              <span className="text-sm font-medium text-white">Farmer Support</span>
             </div>
           </div>
 
@@ -68,8 +68,8 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <Button
               size="lg"
-              onClick={scrollToProducts}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-warm text-lg px-8 py-6 rounded-xl"
+              onClick={() => scrollToSection('products')}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-warm text-lg px-8 py-6 rounded-xl cursor-pointer"
             >
               Explore Our Products
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -77,16 +77,8 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => {
-                const element = document.getElementById('about');
-                if (element) {
-                  const offset = 80;
-                  const elementPosition = element.getBoundingClientRect().top;
-                  const offsetPosition = elementPosition + window.pageYOffset - offset;
-                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                }
-              }}
-              className="border-2 border-primary text-primary hover:bg-primary/5 text-lg px-8 py-6 rounded-xl"
+              onClick={() => scrollToSection('about')}
+              className="border-2 border-primary text-primary hover:bg-primary/5 text-lg px-8 py-6 rounded-xl cursor-pointer"
             >
               Our Story
             </Button>
@@ -95,7 +87,7 @@ const Hero = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
     </div>
   );
 };

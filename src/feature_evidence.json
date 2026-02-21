@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-significantly-increase-the-border-darkness-and-background-opacity-of-the-three-feature-pill-elements-100-natural-millets-women-led-farmer-support-in-the-hero-component-to-make-them-much-more-visible-and-prominent",
-      "featureTitle": "Significantly increase the border darkness and background opacity of the three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') in the Hero component to make them much more visible and prominent",
+      "featureId": "feature-fix-the-explore-our-products-button-in-the-hero-component-to-scroll-smoothly-to-the-products-section-when-clicked",
+      "featureTitle": "Fix the 'Explore Our Products' button in the Hero component to scroll smoothly to the products section when clicked",
       "files": [
         "frontend/src/components/Hero.tsx"
       ],
@@ -15,7 +15,25 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-39"
+        "REQ-42"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-fix-the-our-story-button-in-the-hero-component-to-scroll-smoothly-to-the-about-section-when-clicked",
+      "featureTitle": "Fix the 'Our Story' button in the Hero component to scroll smoothly to the about section when clicked",
+      "files": [
+        "frontend/src/components/Hero.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-43"
       ],
       "confidence": "high"
     }

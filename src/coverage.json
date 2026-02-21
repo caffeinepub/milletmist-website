@@ -1,18 +1,29 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-21T21:40:27.313Z",
+  "generatedAt": "2026-02-21T22:01:08.934Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-39",
-        "summary": "Significantly increase the border darkness and background opacity of the three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') in the Hero component to make them much more visible and prominent",
+        "id": "REQ-42",
+        "summary": "Fix the 'Explore Our Products' button in the Hero component to scroll smoothly to the products section when clicked",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Hero.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Hero.tsx"
+        ]
+      },
+      {
+        "id": "REQ-43",
+        "summary": "Fix the 'Our Story' button in the Hero component to scroll smoothly to the about section when clicked",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/Hero.tsx"

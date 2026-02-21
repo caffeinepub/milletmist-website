@@ -1,8 +1,8 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-21T21:40:27.310Z",
-  "summary": "The diff shows successful implementation of REQ-39. The Hero.tsx component demonstrates significantly darker borders (border-[3px] with full opacity primary/secondary/accent colors) and increased background opacity (bg-primary/40, bg-secondary/40, bg-accent/40, up from previous lighter values) for all three feature pills ('100% Natural Millets', 'Women-Led', 'Farmer Support'). The styling is consistent across all three pills and applies to both mobile and desktop viewports using responsive Tailwind classes.",
+  "generatedAt": "2026-02-21T22:01:08.930Z",
+  "summary": "The diff shows that both Hero section CTA buttons have been successfully fixed with smooth scrolling functionality. The implementation adds a scrollToSection function that matches the pattern from Navigation component, with onClick handlers properly wired to both buttons targeting 'products' and 'about' sections. Cursor styling is also confirmed via className='cursor-pointer' on both buttons.",
   "missing_requirements": [],
   "hallucinated_features": [],
   "confidence": 0.95,

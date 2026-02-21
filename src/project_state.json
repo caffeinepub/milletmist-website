@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 27,
+  "projectStateVersion": 31,
   "summary": "Website for Raavni Agrobyte (OPC) Pvt. Ltd., featuring the Milletmist brand of protein bars and energy products, highlighting women leadership and support for ultra-poor millet farmers",
   "architectural_notes": [
     "Website project for food/nutrition company",
@@ -8,9 +8,10 @@
     "Target audience: health-conscious consumers interested in sustainable products"
   ],
   "known_issues": [
-    "Raavni Agrobyte logo not appearing in footer section"
+    "Raavni Agrobyte logo not appearing in footer section",
+    "Hero section buttons 'Explore Our Products' and 'Our Story' not responding to clicks"
   ],
-  "isFixRequest": false,
+  "isFixRequest": true,
   "existing_features": [
     {
       "id": "feature-create-a-hero-section-prominently-featuring-the-milletmist-brand-with-a-tagline-emphasizing-protein-bars-and-energy-products-made-from-millets",
@@ -267,6 +268,38 @@
         "REQ-39"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-significantly-increase-the-border-darkness-and-background-opacity-of-the-three-feature-pill-elements-100-natural-millets-women-led-farmer-support-in-the-hero-component-to-make-them-much-more-prominent-and-visible",
+      "title": "Significantly increase the border darkness and background opacity of the three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') in the Hero component to make them much more prominent and visible",
+      "reqIds": [
+        "REQ-40"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-text-color-and-icon-color-of-all-three-feature-pill-elements-100-natural-millets-women-led-farmer-support-in-the-hero-component-to-white",
+      "title": "Change the text color and icon color of all three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') in the Hero component to white",
+      "reqIds": [
+        "REQ-41"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-explore-our-products-button-in-the-hero-component-to-scroll-smoothly-to-the-products-section-when-clicked",
+      "title": "Fix the 'Explore Our Products' button in the Hero component to scroll smoothly to the products section when clicked",
+      "reqIds": [
+        "REQ-42"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-our-story-button-in-the-hero-component-to-scroll-smoothly-to-the-about-section-when-clicked",
+      "title": "Fix the 'Our Story' button in the Hero component to scroll smoothly to the about section when clicked",
+      "reqIds": [
+        "REQ-43"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -397,6 +430,18 @@
     {
       "id": "AR-33",
       "summary": "Further darken border and background of '100% Natural Millets, Women-Led, Farmer Support' feature pills in hero section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-34",
+      "summary": "Make borders and backgrounds of feature pills ('100% Natural Millets', 'Women-Led', 'Farmer Support') much darker with white text and symbols",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-35",
+      "summary": "Fix hero section buttons 'Explore Our Products' and 'Our Story' to work on click",
       "reqIds": [],
       "status": "pending"
     }

@@ -1,23 +1,37 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Further darken border and background of feature pills in hero section",
+  "title": "Fix Hero section CTA button click handlers",
   "requirements": [
     {
-      "id": "REQ-39",
-      "summary": "Significantly increase the border darkness and background opacity of the three feature pill elements in the Hero component to make them much more visible and prominent",
+      "id": "REQ-42",
+      "summary": "Fix the 'Explore Our Products' button to scroll smoothly to the products section when clicked",
       "acceptanceCriteria": [
-        "The border of all three feature pills ('100% Natural Millets', 'Women-Led', 'Farmer Support') is significantly darker than the current implementation",
-        "The background opacity of all three feature pills is substantially increased for better visibility",
-        "All three pills maintain consistent styling with each other",
-        "The pills remain readable and visually distinct against the hero background image",
-        "The styling changes apply to both mobile and desktop viewports"
+        "Clicking 'Explore Our Products' button scrolls to the products section",
+        "The scroll behavior is smooth and consistent with the navigation menu behavior",
+        "The button has proper cursor styling to indicate it is clickable"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Modify the styling of the three feature pill elements ('100% Natural Millets', 'Women-Led', 'Farmer Support') to significantly darken their borders and increase their background opacity. Update the border color classes to use darker shades and increase the background opacity value to make the pills substantially more visible and prominent against the hero background image while maintaining readability and consistent styling across all three pills for both mobile and desktop viewports."
+          "description": "Add onClick handler to the 'Explore Our Products' button that uses the same smooth scrolling implementation pattern from the Navigation component. The handler should call scrollToSection('products') or use document.getElementById('products')?.scrollIntoView({ behavior: 'smooth', block: 'start' }). Ensure the button has cursor-pointer class for proper cursor styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-43",
+      "summary": "Fix the 'Our Story' button to scroll smoothly to the about section when clicked",
+      "acceptanceCriteria": [
+        "Clicking 'Our Story' button scrolls to the about section",
+        "The scroll behavior is smooth and consistent with the navigation menu behavior",
+        "The button has proper cursor styling to indicate it is clickable"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Add onClick handler to the 'Our Story' button that uses the same smooth scrolling implementation pattern from the Navigation component. The handler should call scrollToSection('about') or use document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' }). Ensure the button has cursor-pointer class for proper cursor styling."
         }
       ]
     }
