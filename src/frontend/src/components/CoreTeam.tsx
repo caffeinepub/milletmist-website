@@ -4,10 +4,10 @@ import { Linkedin } from 'lucide-react';
 const CoreTeam = () => {
   const teamMembers = [
     {
-      name: 'Priya Sharma',
+      name: 'Barnali Chakraborty',
       role: 'Founder & CEO',
-      image: '/assets/generated/team-member-1.dim_400x400.png',
-      description: 'Visionary leader with 15+ years in sustainable agriculture and women empowerment initiatives.'
+      image: '/assets/generated/barnali-founder.dim_400x400.png',
+      description: 'Visionary leader with 10 years in sustainable agriculture and women empowerment initiatives.'
     },
     {
       name: 'Anjali Verma',

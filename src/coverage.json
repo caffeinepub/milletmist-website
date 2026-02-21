@@ -1,35 +1,61 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-21T22:01:08.934Z",
+  "generatedAt": "2026-02-21T22:23:51.033Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 4,
+    "implemented": 4,
     "items": [
       {
-        "id": "REQ-42",
-        "summary": "Fix the 'Explore Our Products' button in the Hero component to scroll smoothly to the products section when clicked",
+        "id": "REQ-45",
+        "summary": "Fix the typography animation on the hero section description text 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' to ensure the fade-in and slide-up animation plays correctly on page load",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Hero.tsx"
+          "frontend/src/components/Hero.tsx",
+          "frontend/tailwind.config.js"
         ],
         "matchedFiles": [
-          "frontend/src/components/Hero.tsx"
+          "frontend/src/components/Hero.tsx",
+          "frontend/tailwind.config.js"
         ]
       },
       {
-        "id": "REQ-43",
-        "summary": "Fix the 'Our Story' button in the Hero component to scroll smoothly to the about section when clicked",
+        "id": "REQ-46",
+        "summary": "Replace the founder profile image in the Core Team section with the uploaded barnali.jpeg image, maintaining the same dimensions as the existing team member images",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Hero.tsx"
+          "frontend/public/assets/generated/barnali-founder.dim_400x400.png",
+          "frontend/src/components/CoreTeam.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/Hero.tsx"
+          "frontend/public/assets/generated/barnali-founder.dim_400x400.png",
+          "frontend/src/components/CoreTeam.tsx"
+        ]
+      },
+      {
+        "id": "REQ-47",
+        "summary": "Change the founder name in the Core Team section from 'Riya Sharma' to 'Barnali Chakraborty'",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CoreTeam.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CoreTeam.tsx"
+        ]
+      },
+      {
+        "id": "REQ-48",
+        "summary": "Update the founder description in the Core Team section to replace '15+' with '10' years of experience",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CoreTeam.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CoreTeam.tsx"
         ]
       }
     ]
@@ -39,7 +65,10 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/barnali-founder.dim_400x400.png",
+    "frontend/src/components/CoreTeam.tsx",
     "frontend/src/components/Hero.tsx",
+    "frontend/tailwind.config.js",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

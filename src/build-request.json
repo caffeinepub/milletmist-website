@@ -1,56 +1,93 @@
 {
   "kind": "build_request",
-  "title": "Fix Hero section CTA button click handlers",
-  "priority": "high",
+  "title": "Fix hero typography animation and update Core Team founder profile",
+  "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-42",
-      "text": "Fix the 'Explore Our Products' button in the Hero component to scroll smoothly to the products section when clicked",
+      "id": "REQ-45",
+      "text": "Fix the typography animation on the hero section description text 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' to ensure the fade-in and slide-up animation plays correctly on page load",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-current"
+          "msg-latest"
         ],
         "quotes": [
-          "in the hero section link not working on this \"Explore Our Products Our Story\" after clicking mouse not action happen."
+          "as give above command typography animation not working fix it"
         ]
       },
       "acceptanceCriteria": [
-        "Clicking 'Explore Our Products' button scrolls to the products section",
-        "The scroll behavior is smooth and consistent with the navigation menu behavior",
-        "The button has proper cursor styling to indicate it is clickable"
+        "The hero section description text displays a smooth fade-in and slide-up animation when the page loads",
+        "The animation plays once on initial page load",
+        "The animation timing and easing create a polished, professional effect"
       ]
     },
     {
-      "id": "REQ-43",
-      "text": "Fix the 'Our Story' button in the Hero component to scroll smoothly to the about section when clicked",
+      "id": "REQ-46",
+      "text": "Replace the founder profile image in the Core Team section with the uploaded barnali.jpeg image, maintaining the same dimensions as the existing team member images",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-current"
+          "msg-latest"
         ],
         "quotes": [
-          "in the hero section link not working on this \"Explore Our Products Our Story\" after clicking mouse not action happen."
+          "in the core team section please change the image of founder in the same size of existing image with the above attached image"
         ]
       },
       "acceptanceCriteria": [
-        "Clicking 'Our Story' button scrolls to the about section",
-        "The scroll behavior is smooth and consistent with the navigation menu behavior",
-        "The button has proper cursor styling to indicate it is clickable"
+        "The founder profile displays the barnali.jpeg image",
+        "The image dimensions match the other team member profile images",
+        "The image displays clearly without distortion or quality loss"
+      ]
+    },
+    {
+      "id": "REQ-47",
+      "text": "Change the founder name in the Core Team section from 'Riya Sharma' to 'Barnali Chakraborty'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "set name \"Barnali Chakraborty\" in place of \"Riya Sharma\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "The founder profile displays 'Barnali Chakraborty' as the name",
+        "The name formatting and styling matches other team member names"
+      ]
+    },
+    {
+      "id": "REQ-48",
+      "text": "Update the founder description in the Core Team section to replace '15+' with '10' years of experience",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "in the given description please put 10 in place of 15+"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The founder description shows '10' instead of '15+' years of experience",
+        "The description text remains coherent and grammatically correct"
       ]
     }
   ],
   "constraints": [
-    "Use the same smooth scrolling implementation pattern that exists in the Navigation component",
-    "Do not modify the visual styling of the buttons, only fix the click handlers"
+    "Do not modify the backend main.mo file",
+    "Maintain the same image dimensions and styling for all team member profiles in the Core Team section",
+    "Preserve the existing animation styles and Tailwind configuration"
   ],
   "nonGoals": [
-    "Changing the button text or styling",
-    "Modifying any other sections of the hero component",
-    "Adding new navigation functionality"
+    "Changing other team member profiles",
+    "Modifying the Core Team section layout or structure",
+    "Updating any other sections of the website"
   ],
   "imageRequirements": {
-    "required": [],
+    "required": [
+      "Professional portrait photo for Barnali Chakraborty founder profile, matching the style and dimensions of existing team member images (barnali-founder.dim_400x400.png)"
+    ],
     "edits": []
   }
 }

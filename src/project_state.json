@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 31,
+  "projectStateVersion": 35,
   "summary": "Website for Raavni Agrobyte (OPC) Pvt. Ltd., featuring the Milletmist brand of protein bars and energy products, highlighting women leadership and support for ultra-poor millet farmers",
   "architectural_notes": [
     "Website project for food/nutrition company",
@@ -9,9 +9,11 @@
   ],
   "known_issues": [
     "Raavni Agrobyte logo not appearing in footer section",
-    "Hero section buttons 'Explore Our Products' and 'Our Story' not responding to clicks"
+    "Hero section buttons 'Explore Our Products' and 'Our Story' not responding to clicks",
+    "Typography animation on hero section description text not working as expected"
   ],
   "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Professional portrait photo for Barnali Chakraborty founder profile, matching the style and dimensions of existing team member images (barnali-founder.dim_400x400.png)",
   "existing_features": [
     {
       "id": "feature-create-a-hero-section-prominently-featuring-the-milletmist-brand-with-a-tagline-emphasizing-protein-bars-and-energy-products-made-from-millets",
@@ -300,6 +302,46 @@
         "REQ-43"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-a-smooth-typography-animation-fade-in-slide-up-or-similar-to-the-hero-section-description-text-premium-millet-based-products-crafted-with-love-and-care-by-women-for-a-healthier-you-and-a-sustainable-future-that-plays-on-page-load",
+      "title": "Add a smooth typography animation (fade-in, slide-up, or similar) to the hero section description text 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' that plays on page load",
+      "reqIds": [
+        "REQ-44"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-typography-animation-on-the-hero-section-description-text-premium-millet-based-products-crafted-with-love-and-care-by-women-for-a-healthier-you-and-a-sustainable-future-to-ensure-the-fade-in-and-slide-up-animation-plays-correctly-on-page-load",
+      "title": "Fix the typography animation on the hero section description text 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' to ensure the fade-in and slide-up animation plays correctly on page load",
+      "reqIds": [
+        "REQ-45"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-founder-profile-image-in-the-core-team-section-with-the-uploaded-barnali-jpeg-image-maintaining-the-same-dimensions-as-the-existing-team-member-images",
+      "title": "Replace the founder profile image in the Core Team section with the uploaded barnali.jpeg image, maintaining the same dimensions as the existing team member images",
+      "reqIds": [
+        "REQ-46"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-founder-name-in-the-core-team-section-from-riya-sharma-to-barnali-chakraborty",
+      "title": "Change the founder name in the Core Team section from 'Riya Sharma' to 'Barnali Chakraborty'",
+      "reqIds": [
+        "REQ-47"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-founder-description-in-the-core-team-section-to-replace-15-with-10-years-of-experience",
+      "title": "Update the founder description in the Core Team section to replace '15+' with '10' years of experience",
+      "reqIds": [
+        "REQ-48"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -442,6 +484,36 @@
     {
       "id": "AR-35",
       "summary": "Fix hero section buttons 'Explore Our Products' and 'Our Story' to work on click",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-36",
+      "summary": "Apply normal typography animation to hero section description text 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-37",
+      "summary": "Fix typography animation on hero section description text",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-38",
+      "summary": "Replace founder image in Core Team section with uploaded image, maintaining same size",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-39",
+      "summary": "Change founder name from 'Riya Sharma' to 'Barnali Chakraborty' in Core Team section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-40",
+      "summary": "Update founder description in Core Team section to change '15+' to '10'",
       "reqIds": [],
       "status": "pending"
     }

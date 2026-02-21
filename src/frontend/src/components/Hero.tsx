@@ -37,19 +37,19 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
             <span className="text-black">Built for Health,</span>
             <br />
             <span className="text-black">Designed for Impact</span>
           </h1>
 
           {/* Description */}
-          <p className="text-xl md:text-2xl text-white font-bold mb-8 max-w-2xl mx-auto animate-fade-in">
+          <p className="text-xl md:text-2xl text-white font-bold mb-8 max-w-2xl mx-auto opacity-0 animate-slide-up [animation-delay:400ms]">
             Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.
           </p>
 
           {/* Feature Pills */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10 animate-fade-in">
+          <div className="flex flex-wrap justify-center gap-4 mb-10 animate-fade-in [animation-delay:600ms]">
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/80 border-[3px] border-primary">
               <Leaf className="h-5 w-5 text-white" />
               <span className="text-sm font-medium text-white">100% Natural Millets</span>
@@ -65,7 +65,7 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in [animation-delay:800ms]">
             <Button
               size="lg"
               onClick={() => scrollToSection('products')}
