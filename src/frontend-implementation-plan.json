@@ -1,0 +1,51 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add core team section",
+  "requirements": [
+    {
+      "id": "REQ-8",
+      "summary": "Create a 'Core Team' section component that displays team members of Raavni Agrobyte (OPC) Pvt. Ltd., emphasizing the women-led nature of the organization with individual team member profiles",
+      "acceptanceCriteria": [
+        "Core Team section is visually integrated with the existing earthy, organic design aesthetic using warm earth tones (terracotta, amber, sage green)",
+        "Section displays multiple team member cards with profile images, names, and roles",
+        "Layout is responsive and works on mobile, tablet, and desktop devices",
+        "Section is added to the main App.tsx component in the appropriate position within the page flow",
+        "Navigation menu is updated to include a 'Team' link that scrolls to the core team section"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CoreTeam.tsx",
+          "operation": "create",
+          "description": "Create a CoreTeam component that displays team member profiles in a responsive grid layout. Include four team member cards showcasing the women-led nature of the organization. Each card should display a profile image, name, role, and brief description. Use the existing design system with OKLCH color variables and warm earth tones (terracotta, amber, sage green) to maintain visual consistency with AboutUs.tsx, Products.tsx, and FarmerSupport.tsx components. Follow the established component structure pattern with semantic HTML, Tailwind CSS classes, and responsive breakpoints for mobile, tablet, and desktop views."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import the CoreTeam component and add it to the page layout between the AboutUs section and the Products section. Wrap it in a semantic section element with an appropriate id attribute for smooth scrolling navigation. Ensure the component follows the existing page flow and maintains consistent spacing with other sections."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Add a 'Team' navigation link to both the desktop and mobile menu arrays. Configure the link to scroll smoothly to the core team section when clicked. Update the active section highlighting logic to include the team section, ensuring visual feedback when users scroll to or click the team navigation item. Maintain the existing scroll detection and styling pattern used for other navigation links."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Render generated team member profile images as static assets from frontend/public/assets/generated directory",
+      "acceptanceCriteria": [
+        "Team member images are loaded from the frontend/public/assets/generated folder",
+        "Images are properly sized and optimized for web display",
+        "Fallback handling is implemented if images fail to load"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CoreTeam.tsx",
+          "operation": "modify",
+          "description": "Update the CoreTeam component to reference the four generated team member profile images using their exact workspace paths: frontend/public/assets/generated/team-member-1.dim_400x400.png (founder/CEO), frontend/public/assets/generated/team-member-2.dim_400x400.png (operations lead), frontend/public/assets/generated/team-member-3.dim_400x400.png (product development lead), and frontend/public/assets/generated/team-member-4.dim_400x400.png (farmer relations coordinator). Configure img elements with appropriate alt text, sizing attributes (400x400), and CSS classes for consistent display. Implement fallback handling using onError event handlers or placeholder logic to gracefully handle image loading failures. Ensure images are responsive and maintain aspect ratio across different screen sizes."
+        }
+      ]
+    }
+  ]
+}

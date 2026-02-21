@@ -1,0 +1,62 @@
+{
+  "kind": "build_request",
+  "title": "Add core team section",
+  "projectName": "Milletmist",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-8",
+      "text": "Create a 'Core Team' section component that displays team members of Raavni Agrobyte (OPC) Pvt. Ltd., emphasizing the women-led nature of the organization with individual team member profiles including photos, names, roles, and brief descriptions",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Add one more section for core team"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Core Team section is visually integrated with the existing earthy, organic design aesthetic using warm earth tones (terracotta, amber, sage green)",
+        "Section displays multiple team member cards with profile images, names, and roles",
+        "Layout is responsive and works on mobile, tablet, and desktop devices",
+        "Section is added to the main App.tsx component in the appropriate position within the page flow",
+        "Navigation menu is updated to include a 'Team' link that scrolls to the core team section"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Render generated team member profile images as static assets from frontend/public/assets/generated directory",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Team member images are loaded from the frontend/public/assets/generated folder",
+        "Images are properly sized and optimized for web display",
+        "Fallback handling is implemented if images fail to load"
+      ]
+    }
+  ],
+  "constraints": [
+    "Maintain consistency with existing design system using OKLCH color variables and earth tone palette",
+    "Follow the established component structure pattern used in AboutUs.tsx, Products.tsx, and FarmerSupport.tsx",
+    "Do not modify immutable frontend paths including hooks and main.tsx"
+  ],
+  "nonGoals": [
+    "Backend data storage for team members",
+    "Admin interface for managing team member information",
+    "Interactive features like team member detail modals or filtering"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Professional portrait photo of a woman team member with warm, natural lighting and neutral background for founder/CEO profile (team-member-1.dim_400x400.png)",
+      "Professional portrait photo of a woman team member with warm, natural lighting and neutral background for operations lead profile (team-member-2.dim_400x400.png)",
+      "Professional portrait photo of a woman team member with warm, natural lighting and neutral background for product development lead profile (team-member-3.dim_400x400.png)",
+      "Professional portrait photo of a woman team member with warm, natural lighting and neutral background for farmer relations coordinator profile (team-member-4.dim_400x400.png)"
+    ],
+    "edits": []
+  }
+}

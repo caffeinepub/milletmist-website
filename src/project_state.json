@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Website for Raavni Agrobyte (OPC) Pvt. Ltd., featuring the Milletmist brand of protein bars and energy products, highlighting women leadership and support for ultra-poor millet farmers",
+  "architectural_notes": [
+    "Website project for food/nutrition company",
+    "Focus on brand storytelling and social impact",
+    "Target audience: health-conscious consumers interested in sustainable products"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Professional portrait photo of a woman team member with warm, natural lighting and neutral background for founder/CEO profile (team-member-1.dim_400x400.png)\n- Professional portrait photo of a woman team member with warm, natural lighting and neutral background for operations lead profile (team-member-2.dim_400x400.png)\n- Professional portrait photo of a woman team member with warm, natural lighting and neutral background for product development lead profile (team-member-3.dim_400x400.png)\n- Professional portrait photo of a woman team member with warm, natural lighting and neutral background for farmer relations coordinator profile (team-member-4.dim_400x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-hero-section-prominently-featuring-the-milletmist-brand-with-a-tagline-emphasizing-protein-bars-and-energy-products-made-from-millets",
+      "title": "Create a hero section prominently featuring the Milletmist brand with a tagline emphasizing protein bars and energy products made from millets",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-about-us-section-describing-raavni-agrobyte-opc-pvt-ltd-as-a-women-led-organization-with-all-core-members-being-women",
+      "title": "Create an 'About Us' section describing Raavni Agrobyte (OPC) Pvt. Ltd. as a women-led organization with all core members being women",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-products-showcase-section-displaying-milletmist-protein-bars-and-energy-products-with-visual-product-cards",
+      "title": "Create a products showcase section displaying Milletmist protein bars and energy products with visual product cards",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-farmer-support-initiative-section-explaining-the-company-s-support-for-ultra-poor-farmers-who-produce-millet-grains",
+      "title": "Create a 'Farmer Support Initiative' section explaining the company's support for ultra-poor farmers who produce millet grains",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-cohesive-visual-design-with-an-earthy-organic-aesthetic-using-warm-earth-tones-terracotta-amber-sage-green-and-natural-textures-that-reflect-millet-agriculture-women-empowerment-and-health-conscious-branding",
+      "title": "Implement a cohesive visual design with an earthy, organic aesthetic using warm earth tones (terracotta, amber, sage green) and natural textures that reflect millet agriculture, women empowerment, and health-conscious branding",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-responsive-navigation-menu-with-sections-for-home-about-us-products-farmer-support-and-contact",
+      "title": "Create a responsive navigation menu with sections for Home, About Us, Products, Farmer Support, and Contact",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-generated-product-images-hero-background-and-farmer-support-visuals-as-static-assets-from-frontend-public-assets-generated",
+      "title": "Render generated product images, hero background, and farmer support visuals as static assets from frontend/public/assets/generated",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-core-team-section-component-that-displays-team-members-of-raavni-agrobyte-opc-pvt-ltd-emphasizing-the-women-led-nature-of-the-organization-with-individual-team-member-profiles-including-photos-names-roles-and-brief-descriptions",
+      "title": "Create a 'Core Team' section component that displays team members of Raavni Agrobyte (OPC) Pvt. Ltd., emphasizing the women-led nature of the organization with individual team member profiles including photos, names, roles, and brief descriptions",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-generated-team-member-profile-images-as-static-assets-from-frontend-public-assets-generated-directory",
+      "title": "Render generated team member profile images as static assets from frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Company information section for Raavni Agrobyte",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Milletmist brand showcase with product displays",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Women leadership highlight section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Farmer support initiative information",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Core team section displaying team members",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Milletmist Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
