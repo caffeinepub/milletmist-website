@@ -30,23 +30,22 @@ const Hero = () => {
           {/* Logo */}
           <div className="mb-8 animate-fade-in">
             <img
-              src="/assets/generated/milletmist-logo.dim_400x400.png"
-              alt="Milletmist Logo"
-              className="h-32 w-32 mx-auto object-contain drop-shadow-lg"
+              src="/assets/RaavniLogoWB.png"
+              alt="Raavni Agrobyte Logo"
+              className="h-32 w-auto mx-auto object-contain drop-shadow-lg"
             />
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in">
-            Nourish Your Body,
+          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+            <span className="text-black">Built for Health,</span>
             <br />
-            <span className="text-primary">Empower Communities</span>
+            <span className="text-black">Designed for Impact</span>
           </h1>
 
-          {/* Tagline */}
-          <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto animate-fade-in">
-            Premium millet-based protein bars and energy products crafted with love by women, 
-            for a healthier you and a sustainable future.
+          {/* Description */}
+          <p className="text-xl md:text-2xl text-white font-bold mb-8 max-w-2xl mx-auto animate-fade-in">
+            Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.
           </p>
 
           {/* Feature Pills */}

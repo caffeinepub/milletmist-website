@@ -1,59 +1,37 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace website logo with custom design",
+  "title": "Update hero section tagline and description text with new content and styling",
   "requirements": [
     {
-      "id": "REQ-10",
-      "summary": "Replace the existing Milletmist website logo with a new custom logo design across all components",
+      "id": "REQ-36",
+      "summary": "Replace hero section tagline with 'Built for Health, Designed for Impact' and style both lines in black color",
       "acceptanceCriteria": [
-        "New logo replaces the current logo in the Navigation component",
-        "New logo replaces the current logo in the Hero section",
-        "New logo replaces the current logo in the Footer component",
-        "Logo maintains consistent sizing and positioning across all components",
-        "Logo works correctly on both light and dark backgrounds where applicable"
+        "The hero section displays 'Built for Health, Designed for Impact' as the tagline",
+        "Both lines of the tagline are rendered in black color",
+        "The previous tagline 'Nourish Your Body, Empower Communities' is completely replaced"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Navigation.tsx",
-          "operation": "modify",
-          "description": "Update the logo image source to reference the generated logo asset at frontend/public/assets/generated/milletmist-logo.dim_400x400.png. Ensure the logo maintains its current sizing and positioning within the navigation bar, and verify it works correctly with the scroll detection styling changes."
-        },
-        {
           "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Update the logo image source to reference the generated logo asset at frontend/public/assets/generated/milletmist-logo.dim_400x400.png. Ensure the logo maintains its current sizing and positioning within the hero section layout, and verify it displays correctly against the background image."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Update the logo image source to reference the generated logo asset at frontend/public/assets/generated/milletmist-logo.dim_400x400.png. Ensure the logo maintains its current sizing and positioning within the footer layout alongside the company name and copyright information."
+          "description": "Update the hero section tagline text from 'Nourish Your Body, Empower Communities' to 'Built for Health, Designed for Impact' and apply black text color styling (text-black) to both lines of the heading. Preserve all other elements including background image, logo, feature pills, and CTA buttons."
         }
       ]
     },
     {
-      "id": "REQ-11",
-      "summary": "Render the generated custom logo as a static asset from frontend/public/assets/generated directory",
+      "id": "REQ-37",
+      "summary": "Replace hero section description with new text and style it in bold white color",
       "acceptanceCriteria": [
-        "Logo file is referenced from frontend/public/assets/generated path",
-        "Logo displays correctly in all locations where it appears",
-        "No routing through backend for logo asset delivery"
+        "The hero section description displays 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.'",
+        "The description text is rendered in bold white color",
+        "The previous description text is completely replaced with the new content"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Navigation.tsx",
-          "operation": "modify",
-          "description": "Ensure the logo src attribute uses the relative path /assets/generated/milletmist-logo.dim_400x400.png which references the static asset from the public directory without backend routing. Verify the image loads correctly and add appropriate alt text for accessibility."
-        },
-        {
           "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Ensure the logo src attribute uses the relative path /assets/generated/milletmist-logo.dim_400x400.png which references the static asset from the public directory without backend routing. Verify the image loads correctly and add appropriate alt text for accessibility."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Ensure the logo src attribute uses the relative path /assets/generated/milletmist-logo.dim_400x400.png which references the static asset from the public directory without backend routing. Verify the image loads correctly and add appropriate alt text for accessibility."
+          "description": "Update the hero section description text from 'Premium millet-based protein bars and energy products crafted with love by women, for a healthier you and a sustainable future.' to 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' and apply bold white color styling (font-bold text-white). Maintain the component structure without modifying layout, background, or other hero elements."
         }
       ]
     }

@@ -1,4 +1,41 @@
 {
   "kind": "feature_evidence_report",
-  "features": []
+  "features": [
+    {
+      "featureId": "feature-replace-the-hero-section-tagline-text-nourish-your-body-empower-communities-with-built-for-health-designed-for-impact-and-style-both-lines-in-black-color",
+      "featureTitle": "Replace the hero section tagline text 'Nourish Your Body, Empower Communities' with 'Built for Health, Designed for Impact' and style both lines in black color",
+      "files": [
+        "frontend/src/components/Hero.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-36"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-the-hero-section-description-text-premium-millet-based-protein-bars-and-energy-products-crafted-with-love-by-women-for-a-healthier-you-and-a-sustainable-future-with-premium-millet-based-products-crafted-with-love-and-care-by-women-for-a-healthier-you-and-a-sustainable-future-and-style-it-in-bold-white-color",
+      "featureTitle": "Replace the hero section description text 'Premium millet-based protein bars and energy products crafted with love by women, for a healthier you and a sustainable future.' with 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' and style it in bold white color",
+      "files": [
+        "frontend/src/components/Hero.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-37"
+      ],
+      "confidence": "high"
+    }
+  ]
 }

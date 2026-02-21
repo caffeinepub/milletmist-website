@@ -1,15 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
+  "projectStateVersion": 23,
   "summary": "Website for Raavni Agrobyte (OPC) Pvt. Ltd., featuring the Milletmist brand of protein bars and energy products, highlighting women leadership and support for ultra-poor millet farmers",
   "architectural_notes": [
     "Website project for food/nutrition company",
     "Focus on brand storytelling and social impact",
     "Target audience: health-conscious consumers interested in sustainable products"
   ],
-  "known_issues": [],
-  "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Professional logo design for Milletmist brand featuring millet grains and organic elements in warm earth tones (terracotta, amber, sage green), suitable for both light and dark backgrounds, modern and clean aesthetic (milletmist-logo.dim_400x400.png)",
+  "known_issues": [
+    "Raavni Agrobyte logo not appearing in footer section"
+  ],
+  "isFixRequest": true,
   "existing_features": [
     {
       "id": "feature-create-a-hero-section-prominently-featuring-the-milletmist-brand-with-a-tagline-emphasizing-protein-bars-and-energy-products-made-from-millets",
@@ -82,6 +83,174 @@
         "REQ-9"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-logo-images-across-the-website-with-the-uploaded-raavni-logo-raavni-logo-revised-smal-jpeg-png",
+      "title": "Replace the existing logo images across the website with the uploaded Raavni logo (Raavni_Logo_Revised_Smal_JPEG.png)",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-text-displayed-in-the-top-right-side-of-the-logo-from-milletmist-to-raavni-agrobyte",
+      "title": "Update the text displayed in the top right side of the logo from 'Milletmist' to 'Raavni Agrobyte'",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-investigate-and-fix-why-the-raavni-logo-raavni-logo-revised-smal-jpeg-png-is-not-appearing-in-the-navigation-component-despite-being-uploaded",
+      "title": "Investigate and fix why the Raavni logo (Raavni_Logo_Revised_Smal_JPEG.png) is not appearing in the Navigation component despite being uploaded",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-verify-the-raavni-logo-image-path-in-the-hero-component-and-ensure-it-renders-correctly",
+      "title": "Verify the Raavni logo image path in the Hero component and ensure it renders correctly",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-raavni-logo-to-have-a-transparent-background-to-improve-visibility-across-different-sections-of-the-website",
+      "title": "Update the Raavni logo to have a transparent background to improve visibility across different sections of the website",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-adjust-the-hero-section-background-image-color-to-improve-text-visibility-while-maintaining-the-current-visual-concept",
+      "title": "Adjust the hero section background image color to improve text visibility while maintaining the current visual concept",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-email-addresses-in-the-contact-component-to-connect-raavni-com-and-barnali-raavni-com",
+      "title": "Update the contact email addresses in the Contact component to connect@raavni.com and barnali@raavni.com",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-phone-number-in-the-contact-component-to-919679650183",
+      "title": "Update the contact phone number in the Contact component to +919679650183",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-visit-address-in-the-contact-component-to-a1402-chandansar-virar-401305-maharashtra",
+      "title": "Update the visit address in the Contact component to '#A1402, Chandansar, Virar - 401305, Maharashtra'",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-transparent-background-raavni-logo-as-a-static-asset-from-frontend-public-assets-generated-directory",
+      "title": "Render the transparent background Raavni logo as a static asset from frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-instances-of-the-raavni-logo-across-the-website-navigation-and-hero-components-with-the-newly-uploaded-raavnilogowb-png-logo-file",
+      "title": "Replace all instances of the Raavni logo across the website (Navigation and Hero components) with the newly uploaded RaavniLogoWB.png logo file",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-adjust-the-color-brightness-of-the-hero-section-background-image-to-ensure-perfect-text-visibility-while-maintaining-the-current-visual-concept-and-composition",
+      "title": "Adjust the color/brightness of the hero section background image to ensure perfect text visibility while maintaining the current visual concept and composition",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-uploaded-raavnilogowb-png-logo-and-the-color-adjusted-hero-background-image-as-static-assets-from-frontend-public-assets-generated-directory",
+      "title": "Render the uploaded RaavniLogoWB.png logo and the color-adjusted hero background image as static assets from frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-raavni-agrobyte-logo-to-appear-correctly-in-the-footer-component-before-the-raavni-agrobyte-text",
+      "title": "Fix the Raavni Agrobyte logo to appear correctly in the Footer component before the 'Raavni Agrobyte' text",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-adjusted-hero-background-image-and-ensure-the-raavnilogowb-png-logo-are-available-as-static-assets-from-frontend-public-assets-generated-directory",
+      "title": "Render the adjusted hero background image and ensure the RaavniLogoWB.png logo are available as static assets from frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-hero-section-background-image-with-the-original-first-draft-version-that-was-used-before-any-color-brightness-adjustments-were-made",
+      "title": "Replace the current hero section background image with the original first draft version that was used before any color/brightness adjustments were made",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-hero-section-tagline-text-nourish-your-body-empower-communities-to-dark-brown-color",
+      "title": "Change the hero section tagline text 'Nourish Your Body, Empower Communities' to dark brown color",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-hero-section-tagline-text-built-for-health-designed-for-impact-to-dark-brown-color",
+      "title": "Change the hero section tagline text 'Built for Health, Designed for Impact' to dark brown color",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-hero-section-description-text-with-premium-millet-based-products-crafted-with-love-and-care-by-women-for-a-healthier-you-and-a-sustainable-future-and-style-it-in-dark-brown-color",
+      "title": "Replace the hero section description text with 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' and style it in dark brown color",
+      "reqIds": [
+        "REQ-35"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-hero-section-tagline-text-nourish-your-body-empower-communities-with-built-for-health-designed-for-impact-and-style-both-lines-in-black-color",
+      "title": "Replace the hero section tagline text 'Nourish Your Body, Empower Communities' with 'Built for Health, Designed for Impact' and style both lines in black color",
+      "reqIds": [
+        "REQ-36"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-hero-section-description-text-premium-millet-based-protein-bars-and-energy-products-crafted-with-love-by-women-for-a-healthier-you-and-a-sustainable-future-with-premium-millet-based-products-crafted-with-love-and-care-by-women-for-a-healthier-you-and-a-sustainable-future-and-style-it-in-bold-white-color",
+      "title": "Replace the hero section description text 'Premium millet-based protein bars and energy products crafted with love by women, for a healthier you and a sustainable future.' with 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' and style it in bold white color",
+      "reqIds": [
+        "REQ-37"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -135,6 +304,78 @@
       "reqIds": [
         "REQ-11"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Replace Milletmist text with Raavni Agrobyte in top right of logo",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Render the uploaded Raavni logo as a static asset from frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Ensure the Raavni logo file (Raavni_Logo_Revised_Smal_JPEG.png) exists in the correct static assets directory (frontend/public/assets/generated) and is accessible",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Update contact emails to connect@raavni.com and barnali@raavni.com",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Update contact phone number to +919679650183",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Update visit address to #A1402, Chandansar, Virar - 401305, Maharashtra",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Fix Raavni Agrobyte logo not appearing in footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Revert hero section background image to the first draft version",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Render the original first draft hero section background image as a static asset from frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-30",
+      "summary": "Replace hero section tagline 'Nourish Your Body, Empower Communities' with 'Built for Health, Designed for Impact' in black color",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-31",
+      "summary": "Replace hero section description with 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' in bold white color",
+      "reqIds": [],
       "status": "pending"
     }
   ],

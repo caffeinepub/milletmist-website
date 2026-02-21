@@ -6,17 +6,20 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: ['Raavni Agrobyte (OPC) Pvt. Ltd.', 'India']
+      details: ['#A1402, Chandansar,', 'Virar - 401305, Maharashtra'],
+      link: null
     },
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@milletmist.com', 'support@raavniagrobyte.com']
+      details: ['connect@raavni.com', 'barnali@raavni.com'],
+      link: 'mailto:connect@raavni.com'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['Coming Soon']
+      details: ['+91 96796 50183'],
+      link: 'tel:+919679650183'
     }
   ];
 
@@ -46,9 +49,27 @@ const Contact = () => {
                   {info.title}
                 </h3>
                 {info.details.map((detail, idx) => (
-                  <p key={idx} className="text-foreground/70 text-sm">
-                    {detail}
-                  </p>
+                  info.link && idx === 0 ? (
+                    <a
+                      key={idx}
+                      href={info.link}
+                      className="block text-foreground/70 text-sm hover:text-primary transition-colors"
+                    >
+                      {detail}
+                    </a>
+                  ) : info.link && idx === 1 && info.icon === Mail ? (
+                    <a
+                      key={idx}
+                      href={`mailto:${detail}`}
+                      className="block text-foreground/70 text-sm hover:text-primary transition-colors"
+                    >
+                      {detail}
+                    </a>
+                  ) : (
+                    <p key={idx} className="text-foreground/70 text-sm">
+                      {detail}
+                    </p>
+                  )
                 ))}
               </CardContent>
             </Card>

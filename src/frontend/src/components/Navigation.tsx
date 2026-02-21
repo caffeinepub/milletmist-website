@@ -66,11 +66,11 @@ const Navigation = () => {
             className="flex items-center space-x-3 group"
           >
             <img
-              src="/assets/generated/milletmist-logo.dim_400x400.png"
-              alt="Milletmist Logo"
-              className="h-12 w-12 object-contain transition-transform group-hover:scale-105"
+              src="/assets/RaavniLogoWB.png"
+              alt="Raavni Agrobyte Logo"
+              className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
             />
-            <span className="font-serif text-2xl font-bold text-primary">Milletmist</span>
+            <span className="font-serif text-2xl font-bold text-primary">Raavni Agrobyte</span>
           </button>
 
           {/* Desktop Navigation */}

@@ -17,12 +17,12 @@ const Footer = () => {
           {/* Brand */}
           <div className="flex items-center gap-3">
             <img
-              src="/assets/generated/milletmist-logo.dim_400x400.png"
-              alt="Milletmist Logo"
-              className="h-10 w-10 object-contain"
+              src="/assets/RaavniLogoWB.png"
+              alt="Raavni Agrobyte Logo"
+              className="h-10 w-auto object-contain"
             />
             <div>
-              <p className="font-serif text-lg font-bold text-foreground">Milletmist</p>
+              <p className="font-serif text-lg font-bold text-foreground">Raavni Agrobyte</p>
               <p className="text-xs text-foreground/60">by Raavni Agrobyte (OPC) Pvt. Ltd.</p>
             </div>
           </div>

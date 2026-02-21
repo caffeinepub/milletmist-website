@@ -1,61 +1,56 @@
 {
   "kind": "build_request",
-  "title": "Replace website logo with custom design",
-  "projectName": "Milletmist",
+  "title": "Update hero section tagline and description text with new content and styling",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-10",
-      "text": "Replace the existing Milletmist website logo with a new custom logo design",
+      "id": "REQ-36",
+      "text": "Replace the hero section tagline text 'Nourish Your Body, Empower Communities' with 'Built for Health, Designed for Impact' and style both lines in black color",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-last"
+          "msg-user-final"
         ],
         "quotes": [
-          "i want to change the logo of the website i already designed"
+          "in place of \"Nourish Your Body, Empower Communities\" put this \"Built for Health, Designed for Impact\" both line in Black color"
         ]
       },
       "acceptanceCriteria": [
-        "New logo replaces the current logo in the Navigation component",
-        "New logo replaces the current logo in the Hero section",
-        "New logo replaces the current logo in the Footer component",
-        "Logo maintains consistent sizing and positioning across all components",
-        "Logo works correctly on both light and dark backgrounds where applicable"
+        "The hero section displays 'Built for Health, Designed for Impact' as the tagline",
+        "Both lines of the tagline are rendered in black color",
+        "The previous tagline 'Nourish Your Body, Empower Communities' is completely replaced"
       ]
     },
     {
-      "id": "REQ-11",
-      "text": "Render the generated custom logo as a static asset from frontend/public/assets/generated directory",
+      "id": "REQ-37",
+      "text": "Replace the hero section description text 'Premium millet-based protein bars and energy products crafted with love by women, for a healthier you and a sustainable future.' with 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.' and style it in bold white color",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-last"
+          "msg-user-final"
+        ],
+        "quotes": [
+          "in place of \" Premium millet-based protein bars and energy products crafted with love by women, for a healthier you and a sustainable future.\" replace with \"Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.\" this one is in bold white color"
         ]
       },
       "acceptanceCriteria": [
-        "Logo file is referenced from frontend/public/assets/generated path",
-        "Logo displays correctly in all locations where it appears",
-        "No routing through backend for logo asset delivery"
+        "The hero section description displays 'Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.'",
+        "The description text is rendered in bold white color",
+        "The previous description text is completely replaced with the new content"
       ]
     }
   ],
   "constraints": [
-    "Do not modify backend/main.mo as no backend changes are needed",
-    "Do not edit files in frontend/src/hooks/ directory",
-    "Do not edit frontend/src/main.tsx",
-    "Do not edit frontend/src/components/ui/ directory"
+    "Do not modify the Hero component's layout or structure beyond text content and styling changes",
+    "Maintain all other existing hero section elements (background image, logo, CTA buttons, feature pills)"
   ],
   "nonGoals": [
-    "Changing the website color scheme",
-    "Modifying navigation structure",
-    "Updating team member profiles",
-    "Changing product information"
+    "Changing any other sections of the website",
+    "Modifying the hero section background or images",
+    "Altering navigation or footer components"
   ],
   "imageRequirements": {
-    "required": [
-      "Professional logo design for Milletmist brand featuring millet grains and organic elements in warm earth tones (terracotta, amber, sage green), suitable for both light and dark backgrounds, modern and clean aesthetic (milletmist-logo.dim_400x400.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

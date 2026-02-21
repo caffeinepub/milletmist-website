@@ -1,13 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the existing Milletmist logo with a new custom design across all website components.
+**Goal:** Update the hero section text content and styling to reflect new brand messaging.
 
 **Planned changes:**
-- Generate a new custom Milletmist logo with millet grains and organic elements in warm earth tones
-- Update the Navigation component to use the new logo
-- Update the Hero section to use the new logo
-- Update the Footer component to use the new logo
-- Ensure logo works correctly on both light and dark backgrounds
+- Replace hero tagline with "Built for Health, Designed for Impact" and style in black color
+- Replace hero description with "Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future." and style in bold white color
 
-**User-visible outcome:** Users will see a refreshed, professionally designed Milletmist logo throughout the website that better represents the brand's organic and millet-focused identity.
+**User-visible outcome:** The hero section displays updated tagline and description text with the specified styling, maintaining all other existing elements and layout.
