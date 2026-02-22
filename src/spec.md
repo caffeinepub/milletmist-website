@@ -1,11 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the founder profile image with the uploaded barnaliprofressional.png image.
+**Goal:** Replace founder profile image with new version using ultra-aggressive cache-busting to ensure immediate browser update.
 
 **Planned changes:**
-- Replace Barnali Chakraborty's profile image in the Core Team section with barnaliprofressional.png
-- Process and resize the uploaded image to 400x400 pixels to match existing team member images
-- Implement cache-busting to ensure immediate display of the new image
+- Process BarnaliFinalSSize.png and save as unique filename (barnali-ceo-v34.dim_400x400.png) in generated assets directory
+- Update CoreTeam component to reference new unique filename with timestamp query parameter
+- Implement triple-layer cache-busting: unique filename, timestamp query parameter, and React key prop based on build version
+- Add explicit cache-control attributes to image element to prevent browser caching
 
-**User-visible outcome:** The Core Team section displays the new professional portrait of Barnali Chakraborty (Founder & CEO) with consistent sizing alongside other team members.
+**User-visible outcome:** Founder profile image displays the new professional portrait immediately across all browsers and devices without requiring cache clearing.

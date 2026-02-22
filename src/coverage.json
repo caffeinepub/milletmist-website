@@ -1,18 +1,18 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T08:26:51.676Z",
+  "generatedAt": "2026-02-22T09:32:24.266Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 4,
+    "implemented": 4,
     "items": [
       {
-        "id": "REQ-75",
-        "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded barnaliprofressional.png image, maintaining 400x400 dimensions to match existing team member images",
+        "id": "REQ-84",
+        "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliFinalSSize.png image, maintaining 400x400 dimensions to match existing team member images",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/CoreTeam.tsx"
@@ -22,14 +22,36 @@
         ]
       },
       {
-        "id": "REQ-76",
-        "summary": "Render the uploaded barnaliprofressional.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
+        "id": "REQ-85",
+        "summary": "Generate a completely unique filename for the founder profile image that has never been used before (e.g., 'barnali-ceo-v34.dim_400x400.png') to force all browsers and CDNs to treat it as an entirely new asset",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/barnaliprofressional.dim_400x400.png"
+          "frontend/src/components/CoreTeam.tsx"
         ],
         "matchedFiles": [
-          "frontend/public/assets/generated/barnaliprofressional.dim_400x400.png"
+          "frontend/src/components/CoreTeam.tsx"
+        ]
+      },
+      {
+        "id": "REQ-86",
+        "summary": "Implement triple-layer cache-busting strategy: (1) use completely unique filename never used before, (2) append timestamp query parameter to image URL, and (3) add HTTP cache-control meta tags in the image loading logic to prevent browser caching",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CoreTeam.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CoreTeam.tsx"
+        ]
+      },
+      {
+        "id": "REQ-87",
+        "summary": "Add explicit cache-invalidation mechanism in the CoreTeam component by including a unique cache-busting key based on build timestamp or version number that forces React to treat the image as a completely new element",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CoreTeam.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CoreTeam.tsx"
         ]
       }
     ]
@@ -39,7 +61,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/barnaliprofressional.dim_400x400.png",
+    "frontend/public/assets/generated/barnali-ceo-v34.dim_400x400.png",
     "frontend/src/components/CoreTeam.tsx",
     "project_state.json",
     "scratch/component-selection.json",

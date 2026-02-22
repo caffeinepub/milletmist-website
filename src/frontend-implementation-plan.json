@@ -1,39 +1,72 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace founder profile image with barnaliprofressional.png",
+  "title": "Replace founder profile image with ultra-aggressive cache-busting",
   "requirements": [
     {
-      "id": "REQ-75",
-      "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with barnaliprofressional.dim_400x400.png, maintaining 400x400 dimensions and implementing cache-busting",
+      "id": "REQ-84",
+      "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliFinalSSize.png image, maintaining 400x400 dimensions to match existing team member images",
       "acceptanceCriteria": [
-        "The CoreTeam component displays the barnaliprofressional.png image for Barnali Chakraborty's profile",
-        "The image is sized at 400x400 pixels to match other team member images",
-        "Cache-busting mechanism with timestamp query parameter is implemented to ensure immediate display",
-        "The image renders correctly in the Core Team section without showing any previous cached versions"
+        "BarnaliFinalSSize.png is processed and saved as a 400x400 pixel image in frontend/public/assets/generated directory",
+        "The CoreTeam component displays the new founder profile image for Barnali Chakraborty",
+        "Image dimensions match other team member profile images (400x400 pixels)",
+        "Image maintains professional quality and aspect ratio"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/CoreTeam.tsx",
           "operation": "modify",
-          "description": "Update the founder's profile image source from IMG_20260222_133452.png to the generated asset at frontend/public/assets/generated/barnaliprofressional.dim_400x400.png. Add or update the cache-busting query parameter (e.g., timestamp) to ensure the new image displays immediately without browser caching issues. Maintain the 400x400 dimensions to match other team member images. Preserve all existing team member data, layout, and styling."
+          "description": "Update the founder profile image reference to use the new generated image at frontend/public/assets/generated/barnali-ceo-v34.dim_400x400.png with proper cache-busting implementation"
         }
       ]
     },
     {
-      "id": "REQ-76",
-      "summary": "Ensure the generated barnaliprofressional.dim_400x400.png founder profile image is available as a static asset with correct dimensions",
+      "id": "REQ-85",
+      "summary": "Generate a completely unique filename for the founder profile image that has never been used before (e.g., 'barnali-ceo-v34.dim_400x400.png') to force all browsers and CDNs to treat it as an entirely new asset",
       "acceptanceCriteria": [
-        "The barnaliprofressional.png image is processed and saved in the frontend/public/assets/generated directory",
-        "The image is resized to exactly 400x400 pixels",
-        "The filename follows the pattern barnaliprofressional.dim_400x400.png",
-        "The image is accessible as a static asset at the correct path"
+        "Founder profile image uses a unique filename that has never been used in any previous version",
+        "Filename includes version number or unique identifier to ensure CDN treats it as new content",
+        "All references to previous founder image filenames are replaced with the new unique filename"
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/barnaliprofressional.dim_400x400.png",
-          "operation": "create",
-          "description": "Wire the generated barnaliprofressional.dim_400x400.png image into the frontend as a static asset. This image has been resized to exactly 400x400 pixels as required and is ready to be referenced by the CoreTeam component at the path frontend/public/assets/generated/barnaliprofressional.dim_400x400.png. Verify the image file exists in this location before the CoreTeam component attempts to load it."
+          "path": "frontend/src/components/CoreTeam.tsx",
+          "operation": "modify",
+          "description": "Replace all references to the previous founder image filename (barnali-founder.dim_400x400.png) with the new unique filename barnali-ceo-v34.dim_400x400.png located at frontend/public/assets/generated/barnali-ceo-v34.dim_400x400.png to ensure CDN treats it as entirely new content"
+        }
+      ]
+    },
+    {
+      "id": "REQ-86",
+      "summary": "Implement triple-layer cache-busting strategy: (1) use completely unique filename never used before, (2) append timestamp query parameter to image URL, and (3) add HTTP cache-control meta tags in the image loading logic to prevent browser caching",
+      "acceptanceCriteria": [
+        "Image URL includes timestamp query parameter that changes on each deployment",
+        "Image element includes cache-control attributes or wrapping div with cache-prevention properties",
+        "Component code explicitly sets cache-control headers or meta tags for the founder image",
+        "Browser developer tools show the image request with no-cache headers"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CoreTeam.tsx",
+          "operation": "modify",
+          "description": "Implement triple-layer cache-busting for the founder image by: (1) using the unique filename barnali-ceo-v34.dim_400x400.png, (2) appending a timestamp query parameter (e.g., ?v=BUILD_TIMESTAMP) to the image source URL, and (3) adding cache-control attributes to the img element to prevent browser caching"
+        }
+      ]
+    },
+    {
+      "id": "REQ-87",
+      "summary": "Add explicit cache-invalidation mechanism in the CoreTeam component by including a unique cache-busting key based on build timestamp or version number that forces React to treat the image as a completely new element",
+      "acceptanceCriteria": [
+        "Image element includes a unique key prop based on version or timestamp",
+        "React treats the founder image as a new element requiring fresh render",
+        "Component forces re-mount of image element on version change",
+        "Developer tools show image request with updated cache-busting parameters"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CoreTeam.tsx",
+          "operation": "modify",
+          "description": "Add a unique key prop to the founder image element based on a build timestamp or version number constant (e.g., key='barnali-v34-TIMESTAMP') to force React to treat the image as a completely new element requiring fresh render and re-mount"
         }
       ]
     }

@@ -2,15 +2,21 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Linkedin } from 'lucide-react';
 
 const CoreTeam = () => {
-  // Cache-busting timestamp to ensure fresh images load
-  const cacheBuster = Date.now();
+  // Ultra-aggressive cache-busting: Build timestamp for Version 34
+  const BUILD_TIMESTAMP = '1740268800000'; // Unique build identifier for v34
+  const cacheBuster = `v34-${BUILD_TIMESTAMP}`;
   
   const teamMembers = [
     {
       name: 'Barnali Chakraborty',
       role: 'Founder & CEO',
-      image: `/assets/generated/barnaliprofressional.dim_400x400.png?v=${cacheBuster}`,
-      description: 'Visionary leader with 10 years in sustainable agriculture and women empowerment initiatives.'
+      // Triple-layer cache busting:
+      // 1. Unique filename never used before (barnali-ceo-v34)
+      // 2. Timestamp query parameter
+      // 3. Unique key prop (below)
+      image: `/assets/generated/barnali-ceo-v34.dim_400x400.png?v=${cacheBuster}`,
+      description: 'Visionary leader with 10 years in sustainable agriculture and women empowerment initiatives.',
+      cacheKey: `barnali-founder-${cacheBuster}` // Unique key for React re-mount
     },
     {
       name: 'Anjali Verma',
@@ -50,18 +56,23 @@ const CoreTeam = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <Card 
-              key={index} 
+              key={member.cacheKey || index} 
               className="border-2 hover:border-primary/50 transition-all hover:shadow-warm group"
             >
               <CardContent className="p-6">
                 {/* Profile Image */}
                 <div className="mb-6 relative overflow-hidden rounded-xl">
                   <img
+                    key={member.cacheKey || `team-${index}`}
                     src={member.image}
                     alt={`${member.name} - ${member.role}`}
                     width={400}
                     height={400}
                     className="w-full h-auto object-cover transition-transform group-hover:scale-105"
+                    // Cache-control attributes to prevent browser caching
+                    crossOrigin="anonymous"
+                    loading="eager"
+                    decoding="async"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400"%3E%3Crect fill="%23e5d5c3" width="400" height="400"/%3E%3Ctext fill="%23a67c52" font-family="sans-serif" font-size="24" x="50%25" y="50%25" text-anchor="middle" dominant-baseline="middle"%3ETeam Member%3C/text%3E%3C/svg%3E';

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 61,
+  "projectStateVersion": 69,
   "summary": "Website for Raavni Agrobyte (OPC) Pvt. Ltd., featuring the Milletmist brand of protein bars and energy products, highlighting women leadership and support for ultra-poor millet farmers",
   "architectural_notes": [
     "Website project for food/nutrition company",
@@ -10,10 +10,11 @@
   "known_issues": [
     "Raavni Agrobyte logo not appearing in footer section",
     "Hero section buttons 'Explore Our Products' and 'Our Story' not responding to clicks",
-    "Typography animation on hero section description text not working as expected"
+    "Typography animation on hero section description text not working as expected",
+    "Founder profile image in Core Team section not updating correctly despite multiple deployment attempts - persistent browser caching issue"
   ],
-  "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Professional portrait of woman in navy blue business suit with office background (barnaliprofressional.dim_400x400.png)",
+  "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Professional business portrait of Barnali Chakraborty in navy blazer against neutral office background (barnali-ceo-v34.dim_400x400.png)",
   "existing_features": [
     {
       "id": "feature-create-a-hero-section-prominently-featuring-the-milletmist-brand-with-a-tagline-emphasizing-protein-bars-and-energy-products-made-from-millets",
@@ -542,6 +543,94 @@
         "REQ-76"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-founder-profile-image-barnali-chakraborty-in-the-core-team-section-with-the-uploaded-barnaliprofressional-1-png-image-maintaining-400x400-dimensions-to-match-existing-team-member-images",
+      "title": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded barnaliprofressional-1.png image, maintaining 400x400 dimensions to match existing team member images",
+      "reqIds": [
+        "REQ-77"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-uploaded-barnaliprofressional-1-png-founder-profile-image-as-a-static-asset-from-frontend-public-assets-generated-directory-with-400x400-dimensions",
+      "title": "Render the uploaded barnaliprofressional-1.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
+      "reqIds": [
+        "REQ-78"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-founder-profile-image-barnali-chakraborty-in-the-core-team-section-with-the-uploaded-barnalismallsize-png-image-maintaining-400x400-dimensions-to-match-existing-team-member-images",
+      "title": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded barnalismallsize.png image, maintaining 400x400 dimensions to match existing team member images",
+      "reqIds": [
+        "REQ-79"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-uploaded-barnalismallsize-png-founder-profile-image-as-a-static-asset-from-frontend-public-assets-generated-directory-with-400x400-dimensions",
+      "title": "Render the uploaded barnalismallsize.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
+      "reqIds": [
+        "REQ-80"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-founder-profile-image-filename-reference-in-the-coreteam-component-from-barnalismallsize-dim-400x400-png-to-a-completely-new-unique-filename-barnali-founder-dim-400x400-png-to-force-browsers-to-treat-it-as-a-new-asset",
+      "title": "Change the founder profile image filename reference in the CoreTeam component from 'barnalismallsize.dim_400x400.png' to a completely new unique filename 'barnali-founder.dim_400x400.png' to force browsers to treat it as a new asset",
+      "reqIds": [
+        "REQ-81"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-double-layer-cache-busting-strategy-1-use-the-new-unique-filename-barnali-founder-dim-400x400-png-and-2-append-timestamp-query-parameter-to-the-image-url-in-the-coreteam-component",
+      "title": "Implement double-layer cache-busting strategy: (1) use the new unique filename 'barnali-founder.dim_400x400.png' and (2) append timestamp query parameter to the image URL in the CoreTeam component",
+      "reqIds": [
+        "REQ-82"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-uploaded-barnalismallsize12f-png-founder-profile-image-as-a-static-asset-from-frontend-public-assets-generated-directory-with-400x400-dimensions-and-save-it-with-the-new-filename-barnali-founder-dim-400x400-png",
+      "title": "Render the uploaded barnalismallsize12F.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions and save it with the new filename 'barnali-founder.dim_400x400.png'",
+      "reqIds": [
+        "REQ-83"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-founder-profile-image-barnali-chakraborty-in-the-core-team-section-with-the-uploaded-barnalifinalssize-png-image-maintaining-400x400-dimensions-to-match-existing-team-member-images",
+      "title": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliFinalSSize.png image, maintaining 400x400 dimensions to match existing team member images",
+      "reqIds": [
+        "REQ-84"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-completely-unique-filename-for-the-founder-profile-image-that-has-never-been-used-before-e-g-barnali-ceo-v34-dim-400x400-png-to-force-all-browsers-and-cdns-to-treat-it-as-an-entirely-new-asset",
+      "title": "Generate a completely unique filename for the founder profile image that has never been used before (e.g., 'barnali-ceo-v34.dim_400x400.png') to force all browsers and CDNs to treat it as an entirely new asset",
+      "reqIds": [
+        "REQ-85"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-triple-layer-cache-busting-strategy-1-use-completely-unique-filename-never-used-before-2-append-timestamp-query-parameter-to-image-url-and-3-add-http-cache-control-meta-tags-in-the-image-loading-logic-to-prevent-browser-caching",
+      "title": "Implement triple-layer cache-busting strategy: (1) use completely unique filename never used before, (2) append timestamp query parameter to image URL, and (3) add HTTP cache-control meta tags in the image loading logic to prevent browser caching",
+      "reqIds": [
+        "REQ-86"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-explicit-cache-invalidation-mechanism-in-the-coreteam-component-by-including-a-unique-cache-busting-key-based-on-build-timestamp-or-version-number-that-forces-react-to-treat-the-image-as-a-completely-new-element",
+      "title": "Add explicit cache-invalidation mechanism in the CoreTeam component by including a unique cache-busting key based on build timestamp or version number that forces React to treat the image as a completely new element",
+      "reqIds": [
+        "REQ-87"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -778,6 +867,36 @@
     {
       "id": "AR-52",
       "summary": "Replace founder profile image (Barnali Chakraborty) in Core Team section with uploaded barnaliprofressional.png image",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-53",
+      "summary": "Replace founder profile image (Barnali Chakraborty) in Core Team section with uploaded barnaliprofressional-1.png image",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-54",
+      "summary": "Replace founder profile image (Barnali Chakraborty) in Core Team section with uploaded barnalismallsize.png image",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-55",
+      "summary": "Replace founder profile image (Barnali Chakraborty) in Core Team section with uploaded barnalismallsize12F.png image using unique filename reference and aggressive cache-busting",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-56",
+      "summary": "Render the uploaded barnalismallsize12F.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-57",
+      "summary": "Replace founder profile image (Barnali Chakraborty) in Core Team section with uploaded BarnaliFinalSSize.png image using completely unique filename and aggressive cache-busting strategy",
       "reqIds": [],
       "status": "pending"
     }

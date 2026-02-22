@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-founder-profile-image-barnali-chakraborty-in-the-core-team-section-with-the-uploaded-barnaliprofressional-png-image-maintaining-400x400-dimensions-to-match-existing-team-member-images",
-      "featureTitle": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded barnaliprofressional.png image, maintaining 400x400 dimensions to match existing team member images",
+      "featureId": "feature-replace-the-founder-profile-image-barnali-chakraborty-in-the-core-team-section-with-the-uploaded-barnalifinalssize-png-image-maintaining-400x400-dimensions-to-match-existing-team-member-images",
+      "featureTitle": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliFinalSSize.png image, maintaining 400x400 dimensions to match existing team member images",
       "files": [
         "frontend/src/components/CoreTeam.tsx"
       ],
@@ -15,14 +15,16 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-75"
+        "REQ-84"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-render-the-uploaded-barnaliprofressional-png-founder-profile-image-as-a-static-asset-from-frontend-public-assets-generated-directory-with-400x400-dimensions",
-      "featureTitle": "Render the uploaded barnaliprofressional.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
-      "files": [],
+      "featureId": "feature-generate-a-completely-unique-filename-for-the-founder-profile-image-that-has-never-been-used-before-e-g-barnali-ceo-v34-dim-400x400-png-to-force-all-browsers-and-cdns-to-treat-it-as-an-entirely-new-asset",
+      "featureTitle": "Generate a completely unique filename for the founder profile image that has never been used before (e.g., 'barnali-ceo-v34.dim_400x400.png') to force all browsers and CDNs to treat it as an entirely new asset",
+      "files": [
+        "frontend/src/components/CoreTeam.tsx"
+      ],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
@@ -31,7 +33,43 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-76"
+        "REQ-85"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-triple-layer-cache-busting-strategy-1-use-completely-unique-filename-never-used-before-2-append-timestamp-query-parameter-to-image-url-and-3-add-http-cache-control-meta-tags-in-the-image-loading-logic-to-prevent-browser-caching",
+      "featureTitle": "Implement triple-layer cache-busting strategy: (1) use completely unique filename never used before, (2) append timestamp query parameter to image URL, and (3) add HTTP cache-control meta tags in the image loading logic to prevent browser caching",
+      "files": [
+        "frontend/src/components/CoreTeam.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-86"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-explicit-cache-invalidation-mechanism-in-the-coreteam-component-by-including-a-unique-cache-busting-key-based-on-build-timestamp-or-version-number-that-forces-react-to-treat-the-image-as-a-completely-new-element",
+      "featureTitle": "Add explicit cache-invalidation mechanism in the CoreTeam component by including a unique cache-busting key based on build timestamp or version number that forces React to treat the image as a completely new element",
+      "files": [
+        "frontend/src/components/CoreTeam.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-87"
       ],
       "confidence": "high"
     }
