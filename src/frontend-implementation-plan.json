@@ -1,39 +1,38 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace founder profile image with uploaded BarnaliC.png",
+  "title": "Locate canister ID and provide DNS configuration instructions for raavni.com",
   "requirements": [
     {
-      "id": "REQ-59",
-      "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliC.png image, maintaining 400x400 dimensions",
+      "id": "REQ-62",
+      "summary": "Generate a comprehensive DNS configuration guide document that includes the canister URL, Cloudflare DNS setup instructions with CNAME records, SSL certificate configuration, and DNS verification steps",
       "acceptanceCriteria": [
-        "The CoreTeam component displays the BarnaliC.dim_400x400.png image for Barnali Chakraborty's profile",
-        "The image dimensions are exactly 400x400 pixels",
-        "The image path references frontend/public/assets/generated/BarnaliC.dim_400x400.png",
-        "Aggressive cache-busting timestamp query parameter is applied to force immediate browser reload",
-        "The uploaded BarnaliC.png photo is used without AI generation or modification"
+        "A complete DNS configuration guide is generated with the actual canister URL populated",
+        "Cloudflare-specific CNAME record configuration steps are provided with exact values (Name: @, Value: [canister-id].ic0.app, Proxy status: enabled)",
+        "SSL/TLS configuration instructions specify the recommended mode (Full or Full (strict))",
+        "Guide includes DNS propagation timeline (24-48 hours) and verification steps",
+        "Instructions are clear, actionable, and suitable for users without deep technical expertise"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/CoreTeam.tsx",
-          "operation": "modify",
-          "description": "Update the founder profile image path from BarnaliChakrborty.dim_400x400.png to BarnaliC.dim_400x400.png for Barnali Chakraborty's team member card. Maintain the existing cache-busting timestamp query parameter pattern to ensure immediate browser reload of the new image. The image reference should use the workspace path frontend/public/assets/generated/BarnaliC.dim_400x400.png."
-        }
-      ]
-    },
-    {
-      "id": "REQ-60",
-      "summary": "Render the uploaded BarnaliC.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
-      "acceptanceCriteria": [
-        "The BarnaliC.png image is processed and saved as BarnaliC.dim_400x400.png in frontend/public/assets/generated",
-        "The image is resized to exactly 400x400 pixels while maintaining aspect ratio",
-        "The exact uploaded photo is used without AI generation"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/BarnaliC.dim_400x400.png",
+          "path": "frontend/src/components/DnsConfigurationGuide.tsx",
           "operation": "create",
-          "description": "Process the uploaded BarnaliC.png image and save it as a 400x400 pixel static asset at frontend/public/assets/generated/BarnaliC.dim_400x400.png. Resize the image to exactly 400x400 dimensions while maintaining aspect ratio. This is the exact uploaded photo that will replace the existing founder profile image in the CoreTeam component."
+          "description": "Create a comprehensive DNS configuration guide component that displays the canister URL retrieved from the backend getCanisterId() method, provides step-by-step Cloudflare DNS setup instructions with specific CNAME record values (Name: @, Value: [canister-id].ic0.app, Proxy: enabled), includes SSL/TLS configuration guidance recommending Full or Full (strict) mode, shows DNS propagation timeline (24-48 hours), and provides verification steps. Use the useActor hook to call the backend getCanisterId() method and format the canister URL as https://[canister-id].ic0.app. Style with Tailwind classes matching the existing warm earth-tone design system."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and add the DnsConfigurationGuide component as a new section in the application layout, positioned after the Contact section and before the Footer. Add an ID attribute for navigation purposes (id=\"dns-guide\"). Ensure the section follows the same semantic HTML structure as other sections."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Add a new navigation link for the DNS Configuration Guide section to the navigation menu. Include it in both desktop and mobile navigation menus with appropriate smooth scrolling behavior to the #dns-guide anchor. Update the active section highlighting logic to include the new section."
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add a React Query hook useCanisterId() that calls the backend getCanisterId() method using the useActor hook. Return the query result with proper loading, error, and data states. This hook will be consumed by the DnsConfigurationGuide component to retrieve and display the canister ID."
         }
       ]
     }

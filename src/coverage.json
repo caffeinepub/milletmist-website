@@ -1,46 +1,55 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-21T23:19:05.907Z",
+  "generatedAt": "2026-02-22T00:01:11.087Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
     "total": 2,
-    "implemented": 2,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-59",
-        "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliC.png image, maintaining 400x400 dimensions to match existing team member images",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/CoreTeam.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/CoreTeam.tsx"
-        ]
+        "id": "REQ-61",
+        "summary": "Search through the project's deployment configuration files (dfx.json, canister configuration files, or deployment metadata) to locate and extract the Internet Computer canister ID for the deployed Raavni Agrobyte application",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
       },
       {
-        "id": "REQ-60",
-        "summary": "Render the uploaded BarnaliC.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
+        "id": "REQ-62",
+        "summary": "Generate a comprehensive DNS configuration guide document that includes: (1) the specific full canister URL for the Raavni Agrobyte application, (2) step-by-step instructions for configuring Cloudflare DNS with the exact CNAME record settings needed to point raavni.com to the canister URL, (3) SSL certificate setup instructions for Cloudflare with recommended SSL/TLS mode settings, and (4) DNS propagation timeline and verification steps",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/BarnaliC.dim_400x400.png"
+          "frontend/src/components/DnsConfigurationGuide.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/hooks/useQueries.ts"
         ],
         "matchedFiles": [
-          "frontend/public/assets/generated/BarnaliC.dim_400x400.png"
+          "frontend/src/components/DnsConfigurationGuide.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/hooks/useQueries.ts"
         ]
       }
     ]
   },
   "changedFiles": [
+    "backend/main.mo",
     "build-request.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/BarnaliC.dim_400x400.png",
-    "frontend/src/components/CoreTeam.tsx",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/DnsConfigurationGuide.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

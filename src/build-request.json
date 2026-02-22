@@ -1,63 +1,65 @@
 {
   "kind": "build_request",
-  "title": "Replace founder profile image with uploaded BarnaliC.png",
-  "priority": "high",
+  "title": "Locate canister ID and provide DNS configuration instructions for raavni.com",
+  "projectName": "Raavni Agrobyte",
+  "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-59",
-      "text": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliC.png image, maintaining 400x400 dimensions to match existing team member images",
-      "target": "frontend",
+      "id": "REQ-61",
+      "text": "Search through the project's deployment configuration files (dfx.json, canister configuration files, or deployment metadata) to locate and extract the Internet Computer canister ID for the deployed Raavni Agrobyte application",
+      "target": "backend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-user-final"
         ],
         "quotes": [
-          "I'm attaching another image.. please replace with this existing founder and ceo image... crosscheck before final result"
+          "provide my full canister URL",
+          "yes",
+          "2"
         ]
       },
       "acceptanceCriteria": [
-        "The CoreTeam component displays the BarnaliC.dim_400x400.png image for Barnali Chakraborty's profile",
-        "The image dimensions are exactly 400x400 pixels",
-        "The image path references frontend/public/assets/generated/BarnaliC.dim_400x400.png",
-        "Aggressive cache-busting timestamp query parameter is applied to force immediate browser reload",
-        "The uploaded BarnaliC.png photo is used without AI generation or modification"
+        "The canister ID is successfully located from project configuration files",
+        "The full canister URL in format https://[canister-id].ic0.app is identified",
+        "If the canister ID cannot be found in configuration files, provide clear guidance on where to locate it"
       ]
     },
     {
-      "id": "REQ-60",
-      "text": "Render the uploaded BarnaliC.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
+      "id": "REQ-62",
+      "text": "Generate a comprehensive DNS configuration guide document that includes: (1) the specific full canister URL for the Raavni Agrobyte application, (2) step-by-step instructions for configuring Cloudflare DNS with the exact CNAME record settings needed to point raavni.com to the canister URL, (3) SSL certificate setup instructions for Cloudflare with recommended SSL/TLS mode settings, and (4) DNS propagation timeline and verification steps",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-user-final"
         ],
         "quotes": [
-          "I'm attaching another image.. please replace with this existing founder and ceo image"
+          "Find the canister ID AND prepare DNS setup instructions",
+          "pointing raavni.com to your deployed application using Cloudflare"
         ]
       },
       "acceptanceCriteria": [
-        "The BarnaliC.png image is processed and saved as BarnaliC.dim_400x400.png in frontend/public/assets/generated",
-        "The image is resized to exactly 400x400 pixels while maintaining aspect ratio",
-        "The exact uploaded photo is used without AI generation"
+        "A complete DNS configuration guide is generated with the actual canister URL populated",
+        "Cloudflare-specific CNAME record configuration steps are provided with exact values (Name: @, Value: [canister-id].ic0.app, Proxy status: enabled)",
+        "SSL/TLS configuration instructions specify the recommended mode (Full or Full (strict))",
+        "Guide includes DNS propagation timeline (24-48 hours) and verification steps",
+        "Instructions are clear, actionable, and suitable for users without deep technical expertise"
       ]
     }
   ],
   "constraints": [
-    "Use the exact uploaded BarnaliC.png image without generating a new AI image",
-    "Maintain 400x400 dimensions to match other team member images",
-    "Implement aggressive cache-busting to prevent browser caching issues",
-    "Do not modify frontend/src/hooks/useInternetIdentity.ts or other immutable paths"
+    "The canister ID must be retrieved from actual project files, not invented or guessed",
+    "Do not modify any existing deployment configurations or files",
+    "The DNS configuration guide is informational only and does not automate the Cloudflare setup process"
   ],
   "nonGoals": [
-    "Changing any other team member images",
-    "Modifying the CoreTeam component layout or structure",
-    "Updating founder name or description text",
-    "Generating AI-created images"
+    "Automatically configuring DNS records in Cloudflare",
+    "Modifying domain registrar settings",
+    "Setting up reverse proxy servers",
+    "Implementing custom domain routing within the Internet Computer application",
+    "Providing support for DNS providers other than Cloudflare"
   ],
   "imageRequirements": {
     "required": [],
-    "edits": [
-      "Resize the uploaded BarnaliC.png to 400x400 dimensions (BarnaliC.png > BarnaliC.dim_400x400.png)"
-    ]
+    "edits": []
   }
 }

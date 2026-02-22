@@ -1,5 +1,15 @@
-// This file is for React Query hooks to interact with the backend
-// Currently, the backend is empty and no queries are needed
-// Add custom hooks here when backend functionality is implemented
+import { useQuery } from '@tanstack/react-query';
+import { useActor } from './useActor';
 
-export {};
+export function useCanisterId() {
+  const { actor, isFetching } = useActor();
+
+  return useQuery<string>({
+    queryKey: ['canisterId'],
+    queryFn: async () => {
+      if (!actor) return '';
+      return actor.getCanisterId();
+    },
+    enabled: !!actor && !isFetching,
+  });
+}

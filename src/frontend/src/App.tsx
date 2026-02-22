@@ -5,6 +5,7 @@ import CoreTeam from './components/CoreTeam';
 import Products from './components/Products';
 import FarmerSupport from './components/FarmerSupport';
 import Contact from './components/Contact';
+import DnsConfigurationGuide from './components/DnsConfigurationGuide';
 import Footer from './components/Footer';
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
         </section>
         <section id="contact">
           <Contact />
+        </section>
+        <section id="dns-guide">
+          <DnsConfigurationGuide />
         </section>
       </main>
       <Footer />
