@@ -1,14 +1,14 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T00:45:47.766Z",
-  "summary": "The diff shows that REQ-69 and REQ-70 have been fully implemented. The Navigation.tsx component has been modified to remove the DNS Setup menu item from the navLinks array, and the scroll handling logic now only includes the six remaining sections (home, about, team, products, farmer-support, contact) with no references to dns-guide or dns-setup.",
+  "generatedAt": "2026-02-22T08:26:51.673Z",
+  "summary": "The diff shows that REQ-75 and REQ-76 are fully implemented. The CoreTeam component has been updated to use the barnaliprofressional.dim_400x400.png image with cache-busting for Barnali Chakraborty's profile, and the file summary confirms the image is accessible from the correct static asset path.",
   "missing_requirements": [],
   "hallucinated_features": [],
   "confidence": 0.95,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/CoreTeam.tsx",
     "project_state.json"
   ]
 }

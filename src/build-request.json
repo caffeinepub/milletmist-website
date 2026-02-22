@@ -1,55 +1,61 @@
 {
   "kind": "build_request",
-  "title": "Remove DNS Setup option from navigation menu",
+  "title": "Replace founder profile image with barnaliprofressional.png",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-69",
-      "text": "Remove the 'DNS Setup' menu item from the Navigation component's menuItems array to eliminate it from both desktop and mobile navigation menus",
+      "id": "REQ-75",
+      "text": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded barnaliprofressional.png image, maintaining 400x400 dimensions to match existing team member images",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-latest"
         ],
         "quotes": [
-          "in the menu DNS Setup option still exists please remove"
+          "change this attached image in place of founder & CEO Image"
         ]
       },
       "acceptanceCriteria": [
-        "The 'DNS Setup' link no longer appears in the desktop navigation menu",
-        "The 'DNS Setup' link no longer appears in the mobile navigation menu",
-        "The menuItems array in Navigation.tsx does not contain any entry with label 'DNS Setup' or 'DNS Guide'"
+        "The CoreTeam component displays the barnaliprofressional.png image for Barnali Chakraborty's profile",
+        "The image is sized at 400x400 pixels to match other team member images",
+        "Cache-busting mechanism with timestamp query parameter is implemented to ensure immediate display",
+        "The image renders correctly in the Core Team section without showing any previous cached versions"
       ]
     },
     {
-      "id": "REQ-70",
-      "text": "Remove any 'dns-guide' or 'dns-setup' section ID references from the Navigation component's scroll handling and active state logic",
+      "id": "REQ-76",
+      "text": "Render the uploaded barnaliprofressional.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-latest"
         ],
         "quotes": [
-          "in the menu DNS Setup option still exists please remove"
+          "change this attached image in place of founder & CEO Image"
         ]
       },
       "acceptanceCriteria": [
-        "No references to 'dns-guide' or 'dns-setup' exist in the Navigation component's scroll event handlers",
-        "No references to 'dns-guide' or 'dns-setup' exist in the Navigation component's active section state logic"
+        "The barnaliprofressional.png image is processed and saved in the frontend/public/assets/generated directory",
+        "The image is resized to exactly 400x400 pixels",
+        "The filename follows the pattern barnaliprofressional.dim_400x400.png",
+        "The image is accessible as a static asset at the correct path"
       ]
     }
   ],
   "constraints": [
-    "Do not modify the Navigation component's core scroll and highlighting functionality",
-    "Preserve all other existing menu items (Home, About Us, Team, Products, Farmer Support, Contact)"
+    "Do not modify the Core Team section layout or structure",
+    "Maintain the same image dimensions (400x400) as other team member images",
+    "Preserve all existing team member data and images"
   ],
   "nonGoals": [
-    "Adding new navigation items",
-    "Changing navigation styling or layout",
-    "Modifying other sections of the website"
+    "Changing any other team member images",
+    "Modifying the Core Team component styling or layout",
+    "Updating any other sections of the website"
   ],
   "imageRequirements": {
-    "required": [],
+    "required": [
+      "Professional portrait of woman in navy blue business suit with office background (barnaliprofressional.dim_400x400.png)"
+    ],
     "edits": []
   }
 }

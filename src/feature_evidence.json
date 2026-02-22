@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-dns-setup-menu-item-from-the-navigation-component-s-menuitems-array-to-eliminate-it-from-both-desktop-and-mobile-navigation-menus",
-      "featureTitle": "Remove the 'DNS Setup' menu item from the Navigation component's menuItems array to eliminate it from both desktop and mobile navigation menus",
+      "featureId": "feature-replace-the-founder-profile-image-barnali-chakraborty-in-the-core-team-section-with-the-uploaded-barnaliprofressional-png-image-maintaining-400x400-dimensions-to-match-existing-team-member-images",
+      "featureTitle": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded barnaliprofressional.png image, maintaining 400x400 dimensions to match existing team member images",
       "files": [
-        "frontend/src/components/Navigation.tsx"
+        "frontend/src/components/CoreTeam.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,16 +15,14 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-69"
+        "REQ-75"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-remove-any-dns-guide-or-dns-setup-section-id-references-from-the-navigation-component-s-scroll-handling-and-active-state-logic",
-      "featureTitle": "Remove any 'dns-guide' or 'dns-setup' section ID references from the Navigation component's scroll handling and active state logic",
-      "files": [
-        "frontend/src/components/Navigation.tsx"
-      ],
+      "featureId": "feature-render-the-uploaded-barnaliprofressional-png-founder-profile-image-as-a-static-asset-from-frontend-public-assets-generated-directory-with-400x400-dimensions",
+      "featureTitle": "Render the uploaded barnaliprofressional.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
+      "files": [],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
@@ -33,7 +31,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-70"
+        "REQ-76"
       ],
       "confidence": "high"
     }

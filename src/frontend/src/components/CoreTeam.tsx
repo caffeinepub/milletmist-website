@@ -9,7 +9,7 @@ const CoreTeam = () => {
     {
       name: 'Barnali Chakraborty',
       role: 'Founder & CEO',
-      image: `/assets/generated/BarnaliC.dim_400x400.png?v=${cacheBuster}`,
+      image: `/assets/generated/barnaliprofressional.dim_400x400.png?v=${cacheBuster}`,
       description: 'Visionary leader with 10 years in sustainable agriculture and women empowerment initiatives.'
     },
     {

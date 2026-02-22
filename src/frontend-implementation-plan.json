@@ -1,36 +1,39 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove DNS Setup option from navigation menu",
+  "title": "Replace founder profile image with barnaliprofressional.png",
   "requirements": [
     {
-      "id": "REQ-69",
-      "summary": "Remove the 'DNS Setup' menu item from the Navigation component's menuItems array",
+      "id": "REQ-75",
+      "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with barnaliprofressional.dim_400x400.png, maintaining 400x400 dimensions and implementing cache-busting",
       "acceptanceCriteria": [
-        "The 'DNS Setup' link no longer appears in the desktop navigation menu",
-        "The 'DNS Setup' link no longer appears in the mobile navigation menu",
-        "The menuItems array in Navigation.tsx does not contain any entry with label 'DNS Setup' or 'DNS Guide'"
+        "The CoreTeam component displays the barnaliprofressional.png image for Barnali Chakraborty's profile",
+        "The image is sized at 400x400 pixels to match other team member images",
+        "Cache-busting mechanism with timestamp query parameter is implemented to ensure immediate display",
+        "The image renders correctly in the Core Team section without showing any previous cached versions"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Navigation.tsx",
+          "path": "frontend/src/components/CoreTeam.tsx",
           "operation": "modify",
-          "description": "Remove the 'DNS Setup' or 'DNS Guide' entry from the menuItems array while preserving all other menu items (Home, About Us, Team, Products, Farmer Support, Contact)"
+          "description": "Update the founder's profile image source from IMG_20260222_133452.png to the generated asset at frontend/public/assets/generated/barnaliprofressional.dim_400x400.png. Add or update the cache-busting query parameter (e.g., timestamp) to ensure the new image displays immediately without browser caching issues. Maintain the 400x400 dimensions to match other team member images. Preserve all existing team member data, layout, and styling."
         }
       ]
     },
     {
-      "id": "REQ-70",
-      "summary": "Remove any 'dns-guide' or 'dns-setup' section ID references from the Navigation component's scroll handling and active state logic",
+      "id": "REQ-76",
+      "summary": "Ensure the generated barnaliprofressional.dim_400x400.png founder profile image is available as a static asset with correct dimensions",
       "acceptanceCriteria": [
-        "No references to 'dns-guide' or 'dns-setup' exist in the Navigation component's scroll event handlers",
-        "No references to 'dns-guide' or 'dns-setup' exist in the Navigation component's active section state logic"
+        "The barnaliprofressional.png image is processed and saved in the frontend/public/assets/generated directory",
+        "The image is resized to exactly 400x400 pixels",
+        "The filename follows the pattern barnaliprofressional.dim_400x400.png",
+        "The image is accessible as a static asset at the correct path"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Navigation.tsx",
-          "operation": "modify",
-          "description": "Remove any references to 'dns-guide' or 'dns-setup' section IDs from scroll event handlers and active section state logic while maintaining the core scroll and highlighting functionality for remaining sections"
+          "path": "frontend/public/assets/generated/barnaliprofressional.dim_400x400.png",
+          "operation": "create",
+          "description": "Wire the generated barnaliprofressional.dim_400x400.png image into the frontend as a static asset. This image has been resized to exactly 400x400 pixels as required and is ready to be referenced by the CoreTeam component at the path frontend/public/assets/generated/barnaliprofressional.dim_400x400.png. Verify the image file exists in this location before the CoreTeam component attempts to load it."
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 55,
+  "projectStateVersion": 61,
   "summary": "Website for Raavni Agrobyte (OPC) Pvt. Ltd., featuring the Milletmist brand of protein bars and energy products, highlighting women leadership and support for ultra-poor millet farmers",
   "architectural_notes": [
     "Website project for food/nutrition company",
@@ -10,14 +10,10 @@
   "known_issues": [
     "Raavni Agrobyte logo not appearing in footer section",
     "Hero section buttons 'Explore Our Products' and 'Our Story' not responding to clicks",
-    "Typography animation on hero section description text not working as expected",
-    "Team member 'Meera Patel' name needs to be changed to 'Madhumita Mallick'",
-    "Team member description needs 'scientist' replaced with 'Expert'",
-    "Founder image (Barnali Chakraborty) in Core Team section needs to be replaced with newly provided image",
-    "Browser caching preventing founder image updates despite file replacements",
-    "Uploaded founder images (barnali.jpeg, barnali-1.jpeg, BarnaliChakrborty.jpeg) were incorrectly AI-generated instead of using the exact uploaded files"
+    "Typography animation on hero section description text not working as expected"
   ],
-  "isFixRequest": true,
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Professional portrait of woman in navy blue business suit with office background (barnaliprofressional.dim_400x400.png)",
   "existing_features": [
     {
       "id": "feature-create-a-hero-section-prominently-featuring-the-milletmist-brand-with-a-tagline-emphasizing-protein-bars-and-energy-products-made-from-millets",
@@ -498,6 +494,54 @@
         "REQ-70"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-founder-profile-image-barnali-chakraborty-in-the-core-team-section-with-the-uploaded-1771746697367-png-image-maintaining-400x400-dimensions-to-match-existing-team-member-images",
+      "title": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded 1771746697367.png image, maintaining 400x400 dimensions to match existing team member images",
+      "reqIds": [
+        "REQ-71"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-uploaded-1771746697367-png-founder-profile-image-as-a-static-asset-from-frontend-public-assets-generated-directory-with-400x400-dimensions",
+      "title": "Render the uploaded 1771746697367.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
+      "reqIds": [
+        "REQ-72"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-founder-profile-image-barnali-chakraborty-in-the-core-team-section-with-the-uploaded-img-20260222-133452-png-image-maintaining-400x400-dimensions-to-match-existing-team-member-images",
+      "title": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded IMG_20260222_133452.png image, maintaining 400x400 dimensions to match existing team member images",
+      "reqIds": [
+        "REQ-73"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-uploaded-img-20260222-133452-png-founder-profile-image-as-a-static-asset-from-frontend-public-assets-generated-directory-with-400x400-dimensions",
+      "title": "Render the uploaded IMG_20260222_133452.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
+      "reqIds": [
+        "REQ-74"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-founder-profile-image-barnali-chakraborty-in-the-core-team-section-with-the-uploaded-barnaliprofressional-png-image-maintaining-400x400-dimensions-to-match-existing-team-member-images",
+      "title": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded barnaliprofressional.png image, maintaining 400x400 dimensions to match existing team member images",
+      "reqIds": [
+        "REQ-75"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-uploaded-barnaliprofressional-png-founder-profile-image-as-a-static-asset-from-frontend-public-assets-generated-directory-with-400x400-dimensions",
+      "title": "Render the uploaded barnaliprofressional.png founder profile image as a static asset from frontend/public/assets/generated directory with 400x400 dimensions",
+      "reqIds": [
+        "REQ-76"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -729,6 +773,12 @@
       "reqIds": [
         "REQ-68"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-52",
+      "summary": "Replace founder profile image (Barnali Chakraborty) in Core Team section with uploaded barnaliprofressional.png image",
+      "reqIds": [],
       "status": "pending"
     }
   ],
