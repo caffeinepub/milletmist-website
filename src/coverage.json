@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T09:32:24.266Z",
+  "generatedAt": "2026-02-22T11:21:27.636Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,8 +11,8 @@
     "implemented": 4,
     "items": [
       {
-        "id": "REQ-84",
-        "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliFinalSSize.png image, maintaining 400x400 dimensions to match existing team member images",
+        "id": "REQ-112",
+        "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliFinalSSF.png image, maintaining 400x400 dimensions to match existing team member images",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/CoreTeam.tsx"
@@ -22,8 +22,8 @@
         ]
       },
       {
-        "id": "REQ-85",
-        "summary": "Generate a completely unique filename for the founder profile image that has never been used before (e.g., 'barnali-ceo-v34.dim_400x400.png') to force all browsers and CDNs to treat it as an entirely new asset",
+        "id": "REQ-113",
+        "summary": "Generate a completely unique filename for the founder profile image using v43 versioning convention (e.g., 'barnali-founder-v43.dim_400x400.png') that has never been used before to force all browsers, CDNs, and cache layers to treat it as an entirely new asset",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/CoreTeam.tsx"
@@ -33,8 +33,8 @@
         ]
       },
       {
-        "id": "REQ-86",
-        "summary": "Implement triple-layer cache-busting strategy: (1) use completely unique filename never used before, (2) append timestamp query parameter to image URL, and (3) add HTTP cache-control meta tags in the image loading logic to prevent browser caching",
+        "id": "REQ-114",
+        "summary": "Implement maximum cache-busting strategy combining: (1) completely unique filename never used before with v43 versioning, (2) timestamp query parameter appended to image URL using Date.now(), (3) unique React key prop on the image element based on current timestamp, (4) cache-control and pragma HTTP headers set to 'no-cache' and 'no-store', and (5) DOM manipulation forcing image reload on component mount",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/CoreTeam.tsx"
@@ -44,8 +44,8 @@
         ]
       },
       {
-        "id": "REQ-87",
-        "summary": "Add explicit cache-invalidation mechanism in the CoreTeam component by including a unique cache-busting key based on build timestamp or version number that forces React to treat the image as a completely new element",
+        "id": "REQ-115",
+        "summary": "Verify before deployment that the CoreTeam component correctly references the new v43 filename (barnali-founder-v43.dim_400x400.png) and not any previous version filenames",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/CoreTeam.tsx"
@@ -61,7 +61,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/barnali-ceo-v34.dim_400x400.png",
+    "frontend/public/assets/generated/barnali-founder-v43.dim_400x400.png",
     "frontend/src/components/CoreTeam.tsx",
     "project_state.json",
     "scratch/component-selection.json",

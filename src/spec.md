@@ -1,12 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Replace founder profile image with new version using ultra-aggressive cache-busting to ensure immediate browser update.
+**Goal:** Replace the founder profile image with BarnaliFinalSSF.png using v43 versioning and comprehensive cache-busting to ensure the correct image displays across all browsers and CDN layers.
 
 **Planned changes:**
-- Process BarnaliFinalSSize.png and save as unique filename (barnali-ceo-v34.dim_400x400.png) in generated assets directory
-- Update CoreTeam component to reference new unique filename with timestamp query parameter
-- Implement triple-layer cache-busting: unique filename, timestamp query parameter, and React key prop based on build version
-- Add explicit cache-control attributes to image element to prevent browser caching
+- Process BarnaliFinalSSF.png to 400x400 dimensions with v43 filename (barnali-founder-v43.dim_400x400.png)
+- Update CoreTeam component to reference the new v43 image filename
+- Implement maximum cache-busting strategy combining unique filename, timestamp query parameter, unique React key prop, cache-control headers, and DOM manipulation
+- Verify before deployment that CoreTeam component correctly references barnali-founder-v43.dim_400x400.png
 
-**User-visible outcome:** Founder profile image displays the new professional portrait immediately across all browsers and devices without requiring cache clearing.
+**User-visible outcome:** The Core Team section displays the correct founder profile image from BarnaliFinalSSF.png without any caching issues, maintaining consistency with other team member images.

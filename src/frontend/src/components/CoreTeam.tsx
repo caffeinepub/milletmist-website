@@ -1,22 +1,29 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Linkedin } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 const CoreTeam = () => {
-  // Ultra-aggressive cache-busting: Build timestamp for Version 34
-  const BUILD_TIMESTAMP = '1740268800000'; // Unique build identifier for v34
-  const cacheBuster = `v34-${BUILD_TIMESTAMP}`;
+  const founderImageRef = useRef<HTMLImageElement>(null);
   
+  // Force reload founder image on mount to bypass all caching
+  useEffect(() => {
+    if (founderImageRef.current) {
+      const img = founderImageRef.current;
+      const originalSrc = img.src;
+      img.src = '';
+      setTimeout(() => {
+        img.src = originalSrc;
+      }, 10);
+    }
+  }, []);
+
   const teamMembers = [
     {
       name: 'Barnali Chakraborty',
       role: 'Founder & CEO',
-      // Triple-layer cache busting:
-      // 1. Unique filename never used before (barnali-ceo-v34)
-      // 2. Timestamp query parameter
-      // 3. Unique key prop (below)
-      image: `/assets/generated/barnali-ceo-v34.dim_400x400.png?v=${cacheBuster}`,
+      image: `/assets/generated/barnali-founder-v43.dim_400x400.png?t=${Date.now()}`,
       description: 'Visionary leader with 10 years in sustainable agriculture and women empowerment initiatives.',
-      cacheKey: `barnali-founder-${cacheBuster}` // Unique key for React re-mount
+      isFounder: true
     },
     {
       name: 'Anjali Verma',
@@ -56,29 +63,34 @@ const CoreTeam = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <Card 
-              key={member.cacheKey || index} 
+              key={index} 
               className="border-2 hover:border-primary/50 transition-all hover:shadow-warm group"
             >
               <CardContent className="p-6">
-                {/* Profile Image */}
-                <div className="mb-6 relative overflow-hidden rounded-xl">
-                  <img
-                    key={member.cacheKey || `team-${index}`}
-                    src={member.image}
-                    alt={`${member.name} - ${member.role}`}
-                    width={400}
-                    height={400}
-                    className="w-full h-auto object-cover transition-transform group-hover:scale-105"
-                    // Cache-control attributes to prevent browser caching
-                    crossOrigin="anonymous"
-                    loading="eager"
-                    decoding="async"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400"%3E%3Crect fill="%23e5d5c3" width="400" height="400"/%3E%3Ctext fill="%23a67c52" font-family="sans-serif" font-size="24" x="50%25" y="50%25" text-anchor="middle" dominant-baseline="middle"%3ETeam Member%3C/text%3E%3C/svg%3E';
-                    }}
-                  />
-                </div>
+                {/* Profile Image - Only render if image exists */}
+                {member.image && (
+                  <div className="mb-6 relative overflow-hidden rounded-xl">
+                    <img
+                      ref={member.isFounder ? founderImageRef : null}
+                      key={member.isFounder ? `founder-${Date.now()}` : undefined}
+                      src={member.image}
+                      alt={`${member.name} - ${member.role}`}
+                      width={400}
+                      height={400}
+                      className="w-full h-auto object-cover transition-transform group-hover:scale-105"
+                      loading="lazy"
+                      {...(member.isFounder && {
+                        'data-cache-control': 'no-cache, no-store, must-revalidate',
+                        'data-pragma': 'no-cache',
+                        'data-expires': '0'
+                      })}
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400"%3E%3Crect fill="%23e5d5c3" width="400" height="400"/%3E%3Ctext fill="%23a67c52" font-family="sans-serif" font-size="24" x="50%25" y="50%25" text-anchor="middle" dominant-baseline="middle"%3ETeam Member%3C/text%3E%3C/svg%3E';
+                      }}
+                    />
+                  </div>
+                )}
 
                 {/* Member Info */}
                 <div className="text-center">
