@@ -1,11 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Redeploy the complete Raavni Agrobyte website to the Internet Computer without any modifications.
+**Goal:** Remove the DNS Setup option from the navigation menu.
 
 **Planned changes:**
-- Redeploy frontend and backend canisters to the Internet Computer
-- Ensure all static assets are properly bundled and accessible
-- Verify canister configuration and deployment settings
+- Remove 'DNS Setup' menu item from the Navigation component's menuItems array
+- Remove any 'dns-guide' or 'dns-setup' references from scroll handling and active state logic
 
-**User-visible outcome:** The Raavni Agrobyte website is live and accessible on the Internet Computer with all existing features, components, and assets functioning as currently implemented.
+**User-visible outcome:** The DNS Setup link will no longer appear in the desktop or mobile navigation menus.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 53,
+  "projectStateVersion": 55,
   "summary": "Website for Raavni Agrobyte (OPC) Pvt. Ltd., featuring the Milletmist brand of protein bars and energy products, highlighting women leadership and support for ultra-poor millet farmers",
   "architectural_notes": [
     "Website project for food/nutrition company",
@@ -15,8 +15,7 @@
     "Team member description needs 'scientist' replaced with 'Expert'",
     "Founder image (Barnali Chakraborty) in Core Team section needs to be replaced with newly provided image",
     "Browser caching preventing founder image updates despite file replacements",
-    "Uploaded founder images (barnali.jpeg, barnali-1.jpeg, BarnaliChakrborty.jpeg) were incorrectly AI-generated instead of using the exact uploaded files",
-    "DNS Setup button appearing in top navigation menu in Version 24"
+    "Uploaded founder images (barnali.jpeg, barnali-1.jpeg, BarnaliChakrborty.jpeg) were incorrectly AI-generated instead of using the exact uploaded files"
   ],
   "isFixRequest": true,
   "existing_features": [
@@ -481,6 +480,22 @@
       "title": "Remove the 'dns-guide' section ID reference from the Navigation component's scroll and active state logic",
       "reqIds": [
         "REQ-67"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-dns-setup-menu-item-from-the-navigation-component-s-menuitems-array-to-eliminate-it-from-both-desktop-and-mobile-navigation-menus",
+      "title": "Remove the 'DNS Setup' menu item from the Navigation component's menuItems array to eliminate it from both desktop and mobile navigation menus",
+      "reqIds": [
+        "REQ-69"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-any-dns-guide-or-dns-setup-section-id-references-from-the-navigation-component-s-scroll-handling-and-active-state-logic",
+      "title": "Remove any 'dns-guide' or 'dns-setup' section ID references from the Navigation component's scroll handling and active state logic",
+      "reqIds": [
+        "REQ-70"
       ],
       "version": 1
     }
