@@ -1,13 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Locate the Internet Computer canister ID for the deployed Raavni Agrobyte application and provide comprehensive DNS configuration instructions for pointing raavni.com to the canister using Cloudflare.
+**Goal:** Redeploy the complete Raavni Agrobyte website to the Internet Computer without any modifications.
 
 **Planned changes:**
-- Search deployment configuration files (dfx.json, canister configs, deployment metadata) to extract the canister ID
-- Generate a DNS configuration guide document containing the full canister URL (https://[canister-id].ic0.app)
-- Provide step-by-step Cloudflare DNS setup instructions with exact CNAME record settings
-- Include SSL/TLS configuration recommendations for Cloudflare
-- Document DNS propagation timeline and verification steps
+- Redeploy frontend and backend canisters to the Internet Computer
+- Ensure all static assets are properly bundled and accessible
+- Verify canister configuration and deployment settings
 
-**User-visible outcome:** The user receives the full canister URL for their deployed application and a complete, actionable guide for configuring Cloudflare DNS to point raavni.com to the Internet Computer canister, including SSL setup and verification steps.
+**User-visible outcome:** The Raavni Agrobyte website is live and accessible on the Internet Computer with all existing features, components, and assets functioning as currently implemented.

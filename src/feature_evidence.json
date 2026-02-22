@@ -1,26 +1,4 @@
 {
   "kind": "feature_evidence_report",
-  "features": [
-    {
-      "featureId": "feature-generate-a-comprehensive-dns-configuration-guide-document-that-includes-1-the-specific-full-canister-url-for-the-raavni-agrobyte-application-2-step-by-step-instructions-for-configuring-cloudflare-dns-with-the-exact-cname-record-settings-needed-to-point-raavni-com-to-the-canister-url-3-ssl-certificate-setup-instructions-for-cloudflare-with-recommended-ssl-tls-mode-settings-and-4-dns-propagation-timeline-and-verification-steps",
-      "featureTitle": "Generate a comprehensive DNS configuration guide document that includes: (1) the specific full canister URL for the Raavni Agrobyte application, (2) step-by-step instructions for configuring Cloudflare DNS with the exact CNAME record settings needed to point raavni.com to the canister URL, (3) SSL certificate setup instructions for Cloudflare with recommended SSL/TLS mode settings, and (4) DNS propagation timeline and verification steps",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/DnsConfigurationGuide.tsx",
-        "frontend/src/components/Navigation.tsx",
-        "frontend/src/hooks/useQueries.ts"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-62"
-      ],
-      "confidence": "high"
-    }
-  ]
+  "features": []
 }

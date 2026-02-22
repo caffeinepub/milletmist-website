@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 47,
+  "projectStateVersion": 53,
   "summary": "Website for Raavni Agrobyte (OPC) Pvt. Ltd., featuring the Milletmist brand of protein bars and energy products, highlighting women leadership and support for ultra-poor millet farmers",
   "architectural_notes": [
     "Website project for food/nutrition company",
@@ -15,7 +15,8 @@
     "Team member description needs 'scientist' replaced with 'Expert'",
     "Founder image (Barnali Chakraborty) in Core Team section needs to be replaced with newly provided image",
     "Browser caching preventing founder image updates despite file replacements",
-    "Uploaded founder images (barnali.jpeg, barnali-1.jpeg, BarnaliChakrborty.jpeg) were incorrectly AI-generated instead of using the exact uploaded files"
+    "Uploaded founder images (barnali.jpeg, barnali-1.jpeg, BarnaliChakrborty.jpeg) were incorrectly AI-generated instead of using the exact uploaded files",
+    "DNS Setup button appearing in top navigation menu in Version 24"
   ],
   "isFixRequest": true,
   "existing_features": [
@@ -450,6 +451,38 @@
         "REQ-62"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-the-dnsconfigurationguide-component-from-the-application-by-deleting-the-frontend-src-components-dnsconfigurationguide-tsx-file",
+      "title": "Remove the DnsConfigurationGuide component from the application by deleting the frontend/src/components/DnsConfigurationGuide.tsx file",
+      "reqIds": [
+        "REQ-63"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-dnsconfigurationguide-component-import-and-rendering-from-the-app-tsx-file-to-restore-the-version-22-application-structure",
+      "title": "Remove the DnsConfigurationGuide component import and rendering from the App.tsx file to restore the Version 22 application structure",
+      "reqIds": [
+        "REQ-64"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-dns-guide-navigation-link-from-the-navigation-component-s-menu-items-array-eliminating-both-desktop-and-mobile-menu-rendering-of-this-link",
+      "title": "Remove the 'DNS Guide' navigation link from the Navigation component's menu items array, eliminating both desktop and mobile menu rendering of this link",
+      "reqIds": [
+        "REQ-66"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-dns-guide-section-id-reference-from-the-navigation-component-s-scroll-and-active-state-logic",
+      "title": "Remove the 'dns-guide' section ID reference from the Navigation component's scroll and active state logic",
+      "reqIds": [
+        "REQ-67"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -662,10 +695,24 @@
       "status": "pending"
     },
     {
-      "id": "AR-47",
-      "summary": "Search through the project's deployment configuration files (dfx.json, canister configuration files, or deployment metadata) to locate and extract the Internet Computer canister ID for the deployed Raavni Agrobyte application",
+      "id": "AR-49",
+      "summary": "Remove the DNS configuration guide feature from the feature_evidence.json file to reflect the rollback to Version 22",
       "reqIds": [
-        "REQ-61"
+        "REQ-65"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-50",
+      "summary": "Remove DNS Setup button/menu from top navigation menu",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-51",
+      "summary": "Redeploy the complete Raavni Agrobyte website application to the Internet Computer with all existing features and current configuration",
+      "reqIds": [
+        "REQ-68"
       ],
       "status": "pending"
     }

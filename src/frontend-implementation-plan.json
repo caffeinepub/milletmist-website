@@ -1,38 +1,88 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Locate canister ID and provide DNS configuration instructions for raavni.com",
+  "title": "Redeploy Raavni Agrobyte website",
   "requirements": [
     {
-      "id": "REQ-62",
-      "summary": "Generate a comprehensive DNS configuration guide document that includes the canister URL, Cloudflare DNS setup instructions with CNAME records, SSL certificate configuration, and DNS verification steps",
+      "id": "REQ-68",
+      "summary": "Redeploy the complete Raavni Agrobyte website application to the Internet Computer with all existing features and current configuration",
       "acceptanceCriteria": [
-        "A complete DNS configuration guide is generated with the actual canister URL populated",
-        "Cloudflare-specific CNAME record configuration steps are provided with exact values (Name: @, Value: [canister-id].ic0.app, Proxy status: enabled)",
-        "SSL/TLS configuration instructions specify the recommended mode (Full or Full (strict))",
-        "Guide includes DNS propagation timeline (24-48 hours) and verification steps",
-        "Instructions are clear, actionable, and suitable for users without deep technical expertise"
+        "Application successfully deploys to the Internet Computer",
+        "All frontend components (Navigation, Hero, AboutUs, CoreTeam, Products, FarmerSupport, Contact, Footer) render correctly",
+        "All static assets in frontend/public/assets/generated are accessible",
+        "Backend canister is operational and accessible",
+        "Website is accessible via the canister URL"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/DnsConfigurationGuide.tsx",
-          "operation": "create",
-          "description": "Create a comprehensive DNS configuration guide component that displays the canister URL retrieved from the backend getCanisterId() method, provides step-by-step Cloudflare DNS setup instructions with specific CNAME record values (Name: @, Value: [canister-id].ic0.app, Proxy: enabled), includes SSL/TLS configuration guidance recommending Full or Full (strict) mode, shows DNS propagation timeline (24-48 hours), and provides verification steps. Use the useActor hook to call the backend getCanisterId() method and format the canister URL as https://[canister-id].ic0.app. Style with Tailwind classes matching the existing warm earth-tone design system."
-        },
-        {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Import and add the DnsConfigurationGuide component as a new section in the application layout, positioned after the Contact section and before the Footer. Add an ID attribute for navigation purposes (id=\"dns-guide\"). Ensure the section follows the same semantic HTML structure as other sections."
+          "description": "Verify that all existing sections (Navigation, Hero, AboutUs, CoreTeam, Products, FarmerSupport, Contact, Footer) are correctly imported and rendered in the proper order with semantic HTML structure and section IDs intact"
         },
         {
           "path": "frontend/src/components/Navigation.tsx",
           "operation": "modify",
-          "description": "Add a new navigation link for the DNS Configuration Guide section to the navigation menu. Include it in both desktop and mobile navigation menus with appropriate smooth scrolling behavior to the #dns-guide anchor. Update the active section highlighting logic to include the new section."
+          "description": "Verify navigation component renders with sticky positioning, mobile menu toggle, scroll-based styling, and smooth scrolling to all sections (home, about, team, products, farmer-support, contact, dns-guide) with active section highlighting"
         },
         {
-          "path": "frontend/src/hooks/useQueries.ts",
+          "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Add a React Query hook useCanisterId() that calls the backend getCanisterId() method using the useActor hook. Return the query result with proper loading, error, and data states. This hook will be consumed by the DnsConfigurationGuide component to retrieve and display the canister ID."
+          "description": "Verify hero section displays with full-screen background image from frontend/public/assets/generated/hero-background.dim_1920x1080.png, Raavni Agrobyte logo from frontend/public/assets/generated/raavni-logo-transparent.dim_400x200.png, headline text, feature pills, and CTA buttons"
+        },
+        {
+          "path": "frontend/src/components/AboutUs.tsx",
+          "operation": "modify",
+          "description": "Verify About section displays company information, story content, team image, and four value cards (women empowerment, quality excellence, social impact, natural goodness) with correct styling"
+        },
+        {
+          "path": "frontend/src/components/CoreTeam.tsx",
+          "operation": "modify",
+          "description": "Verify Core Team section displays four team member profile cards with images from frontend/public/assets/generated/ (including cache-busted Barnali image and other team member images), names, roles, descriptions, and LinkedIn link placeholders in responsive grid layout"
+        },
+        {
+          "path": "frontend/src/components/Products.tsx",
+          "operation": "modify",
+          "description": "Verify Products section displays Milletmist Protein Bar and Energy Boost products with images from frontend/public/assets/generated/protein-bar-product.dim_800x800.png and frontend/public/assets/generated/energy-product.dim_800x800.png, descriptions, benefit badges, and millet benefits section"
+        },
+        {
+          "path": "frontend/src/components/FarmerSupport.tsx",
+          "operation": "modify",
+          "description": "Verify Farmer Support component displays hero section with farmer imagery from frontend/public/assets/generated/farmer-hands-millet.dim_1000x667.png and frontend/public/assets/generated/women-farmers.dim_1200x800.png, impact cards showing direct partnership, sustainable income, training, and community building initiatives with detailed text"
+        },
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "modify",
+          "description": "Verify Contact section renders three cards displaying address, email addresses with mailto links, and phone number with tel link, along with call-to-action message"
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Verify Footer component displays Raavni Agrobyte branding, copyright information with dynamic year, company logo, and attribution link to caffeine.ai"
+        },
+        {
+          "path": "frontend/src/components/DnsConfigurationGuide.tsx",
+          "operation": "modify",
+          "description": "Verify DNS Configuration Guide component displays comprehensive instructions for Cloudflare setup, retrieves canister URL from backend, and shows CNAME records, SSL/TLS settings, and verification steps"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Verify global Tailwind CSS styles with custom CSS variables for warm earth-tone color scheme (terracotta, sage, amber) supporting light and dark modes, custom gradient utilities, and typography using Inter and Playfair Display fonts are intact"
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Verify HTML entry point contains correct root div and module script reference to main.tsx for the Raavni Agrobyte application"
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Verify application entry point correctly sets up React Query and Internet Identity providers, then renders the App component into the root DOM element"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Verify Tailwind configuration extends default theme with custom OKLCH color system, typography plugins, custom animations (accordion, fade-in, slide-up), and responsive container settings"
         }
       ]
     }

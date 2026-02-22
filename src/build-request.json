@@ -1,62 +1,42 @@
 {
   "kind": "build_request",
-  "title": "Locate canister ID and provide DNS configuration instructions for raavni.com",
+  "title": "Redeploy Raavni Agrobyte website",
   "projectName": "Raavni Agrobyte",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-61",
-      "text": "Search through the project's deployment configuration files (dfx.json, canister configuration files, or deployment metadata) to locate and extract the Internet Computer canister ID for the deployed Raavni Agrobyte application",
-      "target": "backend",
+      "id": "REQ-68",
+      "text": "Redeploy the complete Raavni Agrobyte website application to the Internet Computer with all existing features and current configuration",
+      "target": "both",
       "source": {
         "messageIds": [
-          "msg-user-final"
+          "msg-latest"
         ],
         "quotes": [
-          "provide my full canister URL",
-          "yes",
-          "2"
+          "redeploy"
         ]
       },
       "acceptanceCriteria": [
-        "The canister ID is successfully located from project configuration files",
-        "The full canister URL in format https://[canister-id].ic0.app is identified",
-        "If the canister ID cannot be found in configuration files, provide clear guidance on where to locate it"
-      ]
-    },
-    {
-      "id": "REQ-62",
-      "text": "Generate a comprehensive DNS configuration guide document that includes: (1) the specific full canister URL for the Raavni Agrobyte application, (2) step-by-step instructions for configuring Cloudflare DNS with the exact CNAME record settings needed to point raavni.com to the canister URL, (3) SSL certificate setup instructions for Cloudflare with recommended SSL/TLS mode settings, and (4) DNS propagation timeline and verification steps",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-final"
-        ],
-        "quotes": [
-          "Find the canister ID AND prepare DNS setup instructions",
-          "pointing raavni.com to your deployed application using Cloudflare"
-        ]
-      },
-      "acceptanceCriteria": [
-        "A complete DNS configuration guide is generated with the actual canister URL populated",
-        "Cloudflare-specific CNAME record configuration steps are provided with exact values (Name: @, Value: [canister-id].ic0.app, Proxy status: enabled)",
-        "SSL/TLS configuration instructions specify the recommended mode (Full or Full (strict))",
-        "Guide includes DNS propagation timeline (24-48 hours) and verification steps",
-        "Instructions are clear, actionable, and suitable for users without deep technical expertise"
+        "Application successfully deploys to the Internet Computer",
+        "All frontend components (Navigation, Hero, AboutUs, CoreTeam, Products, FarmerSupport, Contact, Footer) render correctly",
+        "All static assets in frontend/public/assets/generated are accessible",
+        "Backend canister is operational and accessible",
+        "Website is accessible via the canister URL"
       ]
     }
   ],
   "constraints": [
-    "The canister ID must be retrieved from actual project files, not invented or guessed",
-    "Do not modify any existing deployment configurations or files",
-    "The DNS configuration guide is informational only and does not automate the Cloudflare setup process"
+    "Do not modify any existing functionality or styling",
+    "Preserve all current feature implementations",
+    "Maintain the single-actor backend architecture",
+    "Keep all static assets in frontend/public/assets/generated"
   ],
   "nonGoals": [
-    "Automatically configuring DNS records in Cloudflare",
-    "Modifying domain registrar settings",
-    "Setting up reverse proxy servers",
-    "Implementing custom domain routing within the Internet Computer application",
-    "Providing support for DNS providers other than Cloudflare"
+    "Adding new features",
+    "Modifying existing components",
+    "Changing visual styling",
+    "Adding or removing team members",
+    "Updating contact information"
   ],
   "imageRequirements": {
     "required": [],
