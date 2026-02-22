@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-founder-profile-image-barnali-chakraborty-in-the-core-team-section-with-the-uploaded-barnalifinalssf-png-image-maintaining-400x400-dimensions-to-match-existing-team-member-images",
-      "featureTitle": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliFinalSSF.png image, maintaining 400x400 dimensions to match existing team member images",
+      "featureId": "feature-replace-barnali-chakraborty-s-profile-image-in-the-core-team-section-with-the-uploaded-barnalifounderlatest-png-file-processing-it-to-match-the-style-and-dimensions-of-other-team-member-photos",
+      "featureTitle": "Replace Barnali Chakraborty's profile image in the Core Team section with the uploaded 'barnalifounderlatest.png' file, processing it to match the style and dimensions of other team member photos",
       "files": [
         "frontend/src/components/CoreTeam.tsx"
       ],
@@ -15,13 +15,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-112"
+        "REQ-1"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-generate-a-completely-unique-filename-for-the-founder-profile-image-using-v43-versioning-convention-e-g-barnali-founder-v43-dim-400x400-png-that-has-never-been-used-before-to-force-all-browsers-cdns-and-cache-layers-to-treat-it-as-an-entirely-new-asset",
-      "featureTitle": "Generate a completely unique filename for the founder profile image using v43 versioning convention (e.g., 'barnali-founder-v43.dim_400x400.png') that has never been used before to force all browsers, CDNs, and cache layers to treat it as an entirely new asset",
+      "featureId": "feature-implement-aggressive-cache-busting-for-barnali-chakraborty-s-new-profile-image-to-ensure-the-updated-image-displays-immediately-without-browser-caching-issues",
+      "featureTitle": "Implement aggressive cache-busting for Barnali Chakraborty's new profile image to ensure the updated image displays immediately without browser caching issues",
       "files": [
         "frontend/src/components/CoreTeam.tsx"
       ],
@@ -33,13 +33,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-113"
+        "REQ-2"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-implement-maximum-cache-busting-strategy-combining-1-completely-unique-filename-never-used-before-with-v43-versioning-2-timestamp-query-parameter-appended-to-image-url-using-date-now-3-unique-react-key-prop-on-the-image-element-based-on-current-timestamp-4-cache-control-and-pragma-http-headers-set-to-no-cache-and-no-store-and-5-dom-manipulation-forcing-image-reload-on-component-mount",
-      "featureTitle": "Implement maximum cache-busting strategy combining: (1) completely unique filename never used before with v43 versioning, (2) timestamp query parameter appended to image URL using Date.now(), (3) unique React key prop on the image element based on current timestamp, (4) cache-control and pragma HTTP headers set to 'no-cache' and 'no-store', and (5) DOM manipulation forcing image reload on component mount",
+      "featureId": "feature-deploy-the-image-replacement-to-draft-environment-first-for-verification-before-pushing-to-production",
+      "featureTitle": "Deploy the image replacement to draft environment first for verification before pushing to production",
       "files": [
         "frontend/src/components/CoreTeam.tsx"
       ],
@@ -51,25 +51,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-114"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-verify-before-deployment-that-the-coreteam-component-correctly-references-the-new-v43-filename-barnali-founder-v43-dim-400x400-png-and-not-any-previous-version-filenames",
-      "featureTitle": "Verify before deployment that the CoreTeam component correctly references the new v43 filename (barnali-founder-v43.dim_400x400.png) and not any previous version filenames",
-      "files": [
-        "frontend/src/components/CoreTeam.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-115"
+        "REQ-3"
       ],
       "confidence": "high"
     }

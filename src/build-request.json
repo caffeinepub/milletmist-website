@@ -1,99 +1,79 @@
 {
   "kind": "build_request",
-  "title": "Replace founder profile image with BarnaliFinalSSF.png using v43 cache-busting",
-  "priority": "high",
+  "title": "Replace Barnali Chakraborty team image with new professional headshot",
+  "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-112",
-      "text": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliFinalSSF.png image, maintaining 400x400 dimensions to match existing team member images",
+      "id": "REQ-1",
+      "text": "Replace Barnali Chakraborty's profile image in the Core Team section with the uploaded 'barnalifounderlatest.png' file, processing it to match the style and dimensions of other team member photos",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-final"
+          "msg-1",
+          "msg-5"
         ],
         "quotes": [
-          "use BarnaliFinalSSF.png"
+          "now i want to change the image of \"Barnali Chakraborty\" with this attached image.. please replace the attached image with existing image",
+          "I'll process it to match the style and dimensions of your other team member photos"
         ]
       },
       "acceptanceCriteria": [
-        "The CoreTeam component references BarnaliFinalSSF.png as the source image for Barnali Chakraborty's profile",
-        "The image maintains 400x400 pixel dimensions consistent with other team member images",
-        "The founder's name, role, and description text remain unchanged"
+        "The new image replaces Barnali Chakraborty's current profile image in the CoreTeam component",
+        "Image dimensions and aspect ratio match other team member photos",
+        "Image displays correctly without distortion or pixelation"
       ]
     },
     {
-      "id": "REQ-113",
-      "text": "Generate a completely unique filename for the founder profile image using v43 versioning convention (e.g., 'barnali-founder-v43.dim_400x400.png') that has never been used before to force all browsers, CDNs, and cache layers to treat it as an entirely new asset",
+      "id": "REQ-2",
+      "text": "Implement aggressive cache-busting for Barnali Chakraborty's new profile image to ensure the updated image displays immediately without browser caching issues",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-final"
+          "msg-1"
         ],
         "quotes": [
-          "again and again your are showing random image"
+          "after replacing picture reverify and ensure correct image showing"
         ]
       },
       "acceptanceCriteria": [
-        "The generated image filename uses v43 versioning (e.g., barnali-founder-v43.dim_400x400.png)",
-        "The filename has never been used in any previous version of the application",
-        "The filename is distinct from all previous versions (v34-v42)"
+        "Cache-busting strategy applied using timestamp query parameters or unique keys",
+        "Image updates are immediately visible without requiring hard browser refresh",
+        "Implementation matches the cache-busting approach used for other team member images in CoreTeam.tsx"
       ]
     },
     {
-      "id": "REQ-114",
-      "text": "Implement maximum cache-busting strategy combining: (1) completely unique filename never used before with v43 versioning, (2) timestamp query parameter appended to image URL using Date.now(), (3) unique React key prop on the image element based on current timestamp, (4) cache-control and pragma HTTP headers set to 'no-cache' and 'no-store', and (5) DOM manipulation forcing image reload on component mount",
-      "target": "frontend",
+      "id": "REQ-3",
+      "text": "Deploy the image replacement to draft environment first for verification before pushing to production",
+      "target": "both",
       "source": {
         "messageIds": [
-          "msg-user-final"
+          "msg-6"
         ],
         "quotes": [
-          "before publishing result.. check image correctly replace"
+          "I'll deploy to draft first so you can confirm everything looks good before pushing to production"
         ]
       },
       "acceptanceCriteria": [
-        "The image URL includes a timestamp query parameter (e.g., ?t=1234567890)",
-        "The img element has a unique React key prop that changes on every mount",
-        "The img element includes cache-control='no-cache' and pragma='no-cache' attributes",
-        "A useEffect hook in CoreTeam component manipulates the DOM to force image reload on mount",
-        "All five cache-busting mechanisms are active simultaneously"
-      ]
-    },
-    {
-      "id": "REQ-115",
-      "text": "Verify before deployment that the CoreTeam component correctly references the new v43 filename (barnali-founder-v43.dim_400x400.png) and not any previous version filenames",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-final"
-        ],
-        "quotes": [
-          "before publishing result.. check image correctly replace"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The CoreTeam component's image src attribute points to barnali-founder-v43.dim_400x400.png",
-        "No references to previous versions (v34-v42) exist in the component code",
-        "The image path follows the pattern: /assets/generated/barnali-founder-v43.dim_400x400.png"
+        "Changes deployed to draft environment successfully",
+        "Draft deployment allows verification of correct image display",
+        "Production deployment only proceeds after draft verification"
       ]
     }
   ],
   "constraints": [
-    "Do not modify the CoreTeam component's team member data structure beyond the image reference",
-    "Maintain 400x400 pixel dimensions for consistency with other team member profile images",
-    "Use the exact filename BarnaliFinalSSF.png as the source for image generation",
-    "Preserve all existing cache-busting mechanisms from v42 implementation"
+    "Use the uploaded filename 'barnalifounderlatest.png' as the source image",
+    "Match the cache-busting implementation pattern already used in CoreTeam.tsx for Antara Banerjee's image (operationleadF-1.png)",
+    "Maintain consistency with existing team member image styling and dimensions"
   ],
   "nonGoals": [
-    "Changing the founder's name, role, or description text",
-    "Modifying other team member profiles",
-    "Altering the CoreTeam component's layout or styling",
-    "Adding new team members"
+    "Changing other team member images",
+    "Modifying the CoreTeam component layout or structure beyond image replacement",
+    "Adding new team members or removing existing ones"
   ],
   "imageRequirements": {
     "required": [],
     "edits": [
-      "Process uploaded BarnaliFinalSSF.png image to 400x400 dimensions (BarnaliFinalSSF.png > barnali-founder-v43.dim_400x400.png)"
+      "Crop and resize to match team member photo dimensions with professional headshot framing (barnalifounderlatest.png > barnali-founder.dim_400x400.png)"
     ]
   }
 }

@@ -1,5 +1,5 @@
 actor {
   public func getCanisterId() : async Text {
-    "fe627-xqaaa-aaaao-aaaaa-cai";
+    "p5kb8-6iaaa-aaaap-abuca-cai";
   };
 };

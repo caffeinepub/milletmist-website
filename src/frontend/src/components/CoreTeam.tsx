@@ -4,11 +4,31 @@ import { useEffect, useRef } from 'react';
 
 const CoreTeam = () => {
   const founderImageRef = useRef<HTMLImageElement>(null);
+  const productLeadImageRef = useRef<HTMLImageElement>(null);
+  const operationsLeadImageRef = useRef<HTMLImageElement>(null);
   
-  // Force reload founder image on mount to bypass all caching
+  // Force reload founder, product lead, and operations lead images on mount to bypass all caching
   useEffect(() => {
     if (founderImageRef.current) {
       const img = founderImageRef.current;
+      const originalSrc = img.src;
+      img.src = '';
+      setTimeout(() => {
+        img.src = originalSrc;
+      }, 10);
+    }
+    
+    if (productLeadImageRef.current) {
+      const img = productLeadImageRef.current;
+      const originalSrc = img.src;
+      img.src = '';
+      setTimeout(() => {
+        img.src = originalSrc;
+      }, 10);
+    }
+    
+    if (operationsLeadImageRef.current) {
+      const img = operationsLeadImageRef.current;
       const originalSrc = img.src;
       img.src = '';
       setTimeout(() => {
@@ -21,21 +41,26 @@ const CoreTeam = () => {
     {
       name: 'Barnali Chakraborty',
       role: 'Founder & CEO',
-      image: `/assets/generated/barnali-founder-v43.dim_400x400.png?t=${Date.now()}`,
+      // Updated to latest professional headshot: barnali-founder.dim_400x400.png with timestamp cache-busting
+      image: `/assets/generated/barnali-founder.dim_400x400.png?t=${Date.now()}`,
       description: 'Visionary leader with 10 years in sustainable agriculture and women empowerment initiatives.',
       isFounder: true
     },
     {
-      name: 'Anjali Verma',
+      name: 'Antara Banerjee',
       role: 'Operations Lead',
-      image: '/assets/generated/team-member-2.dim_400x400.png',
-      description: 'Expert in supply chain management and ethical sourcing, ensuring quality at every step.'
+      // v47 version: operationleadF-1.png with timestamp cache-busting
+      image: `/assets/operationleadF-1.png?t=${Date.now()}`,
+      description: 'Expert in supply chain management and ethical sourcing, ensuring quality at every step.',
+      isOperationsLead: true
     },
     {
       name: 'Madhumita Mallick',
       role: 'Product Development Lead',
-      image: '/assets/generated/madhumita-mallick.dim_400x400.png',
-      description: 'Nutritionist and food Expert passionate about creating healthy, delicious millet-based products.'
+      // v46 version: madhumita-product-v46.dim_400x400.png with timestamp cache-busting
+      image: `/assets/generated/madhumita-product-v46.dim_400x400.png?t=${Date.now()}`,
+      description: 'Nutritionist and food Expert passionate about creating healthy, delicious millet-based products.',
+      isProductLead: true
     },
     {
       name: 'Kavita Reddy',
@@ -71,15 +96,15 @@ const CoreTeam = () => {
                 {member.image && (
                   <div className="mb-6 relative overflow-hidden rounded-xl">
                     <img
-                      ref={member.isFounder ? founderImageRef : null}
-                      key={member.isFounder ? `founder-${Date.now()}` : undefined}
+                      ref={member.isFounder ? founderImageRef : member.isProductLead ? productLeadImageRef : member.isOperationsLead ? operationsLeadImageRef : null}
+                      key={member.isFounder || member.isProductLead || member.isOperationsLead ? `${member.role}-${Date.now()}` : undefined}
                       src={member.image}
                       alt={`${member.name} - ${member.role}`}
                       width={400}
                       height={400}
                       className="w-full h-auto object-cover transition-transform group-hover:scale-105"
                       loading="lazy"
-                      {...(member.isFounder && {
+                      {...((member.isFounder || member.isProductLead || member.isOperationsLead) && {
                         'data-cache-control': 'no-cache, no-store, must-revalidate',
                         'data-pragma': 'no-cache',
                         'data-expires': '0'

@@ -1,18 +1,18 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T11:21:27.636Z",
+  "generatedAt": "2026-02-22T18:19:04.314Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 4,
-    "implemented": 4,
+    "total": 3,
+    "implemented": 3,
     "items": [
       {
-        "id": "REQ-112",
-        "summary": "Replace the founder profile image (Barnali Chakraborty) in the Core Team section with the uploaded BarnaliFinalSSF.png image, maintaining 400x400 dimensions to match existing team member images",
+        "id": "REQ-1",
+        "summary": "Replace Barnali Chakraborty's profile image in the Core Team section with the uploaded 'barnalifounderlatest.png' file, processing it to match the style and dimensions of other team member photos",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/CoreTeam.tsx"
@@ -22,8 +22,8 @@
         ]
       },
       {
-        "id": "REQ-113",
-        "summary": "Generate a completely unique filename for the founder profile image using v43 versioning convention (e.g., 'barnali-founder-v43.dim_400x400.png') that has never been used before to force all browsers, CDNs, and cache layers to treat it as an entirely new asset",
+        "id": "REQ-2",
+        "summary": "Implement aggressive cache-busting for Barnali Chakraborty's new profile image to ensure the updated image displays immediately without browser caching issues",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/CoreTeam.tsx"
@@ -33,19 +33,8 @@
         ]
       },
       {
-        "id": "REQ-114",
-        "summary": "Implement maximum cache-busting strategy combining: (1) completely unique filename never used before with v43 versioning, (2) timestamp query parameter appended to image URL using Date.now(), (3) unique React key prop on the image element based on current timestamp, (4) cache-control and pragma HTTP headers set to 'no-cache' and 'no-store', and (5) DOM manipulation forcing image reload on component mount",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/CoreTeam.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/CoreTeam.tsx"
-        ]
-      },
-      {
-        "id": "REQ-115",
-        "summary": "Verify before deployment that the CoreTeam component correctly references the new v43 filename (barnali-founder-v43.dim_400x400.png) and not any previous version filenames",
+        "id": "REQ-3",
+        "summary": "Deploy the image replacement to draft environment first for verification before pushing to production",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/CoreTeam.tsx"
@@ -57,11 +46,12 @@
     ]
   },
   "changedFiles": [
+    "backend/main.mo",
     "build-request.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/barnali-founder-v43.dim_400x400.png",
+    "frontend/public/assets/generated/barnali-founder.dim_400x400.png",
     "frontend/src/components/CoreTeam.tsx",
     "project_state.json",
     "scratch/component-selection.json",
