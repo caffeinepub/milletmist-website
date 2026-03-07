@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Crop and resize to match team member photo dimensions with professional headshot framing (barnalifounderlatest.png > barnali-founder.dim_400x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-replace-barnali-chakraborty-s-profile-image-in-the-core-team-section-with-the-uploaded-barnalifounderlatest-png-file-processing-it-to-match-the-style-and-dimensions-of-other-team-member-photos",
+      "title": "Replace Barnali Chakraborty's profile image in the Core Team section with the uploaded 'barnalifounderlatest.png' file, processing it to match the style and dimensions of other team member photos",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-aggressive-cache-busting-for-barnali-chakraborty-s-new-profile-image-to-ensure-the-updated-image-displays-immediately-without-browser-caching-issues",
+      "title": "Implement aggressive cache-busting for Barnali Chakraborty's new profile image to ensure the updated image displays immediately without browser caching issues",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-deploy-the-image-replacement-to-draft-environment-first-for-verification-before-pushing-to-production",
+      "title": "Deploy the image replacement to draft environment first for verification before pushing to production",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "projectName": "Replace Barnali Chakraborty team image with new professional headshot",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

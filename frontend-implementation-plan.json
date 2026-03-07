@@ -1,0 +1,55 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Replace Barnali Chakraborty team image with new professional headshot",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Replace Barnali Chakraborty's profile image with the processed 'barnali-founder.dim_400x400.png' file",
+      "acceptanceCriteria": [
+        "The new image replaces Barnali Chakraborty's current profile image in the CoreTeam component",
+        "Image dimensions and aspect ratio match other team member photos",
+        "Image displays correctly without distortion or pixelation"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CoreTeam.tsx",
+          "operation": "modify",
+          "description": "Update Barnali Chakraborty's image reference to use the new processed image file 'frontend/public/assets/generated/barnali-founder.dim_400x400.png'. Replace the existing image path in the founder team member object to reference the new file."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement aggressive cache-busting for Barnali Chakraborty's new profile image",
+      "acceptanceCriteria": [
+        "Cache-busting strategy applied using timestamp query parameters or unique keys",
+        "Image updates are immediately visible without requiring hard browser refresh",
+        "Implementation matches the cache-busting approach used for other team member images in CoreTeam.tsx"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CoreTeam.tsx",
+          "operation": "modify",
+          "description": "Apply the existing aggressive cache-busting pattern (timestamp query parameters, unique keys, and useEffect DOM manipulation) to Barnali Chakraborty's new image. Ensure the implementation matches the cache-busting approach already used for Antara Banerjee's operationleadF-1.png image with timestamp-based cache invalidation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Deploy image replacement to draft environment for verification",
+      "acceptanceCriteria": [
+        "Changes deployed to draft environment successfully",
+        "Draft deployment allows verification of correct image display",
+        "Production deployment only proceeds after draft verification"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CoreTeam.tsx",
+          "operation": "modify",
+          "description": "Ensure all changes to Barnali Chakraborty's image reference and cache-busting implementation are ready for draft deployment. Verify the component correctly references the processed image at 'frontend/public/assets/generated/barnali-founder.dim_400x400.png' with appropriate cache-busting parameters."
+        }
+      ]
+    }
+  ]
+}

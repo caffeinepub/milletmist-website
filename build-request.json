@@ -1,0 +1,79 @@
+{
+  "kind": "build_request",
+  "title": "Replace Barnali Chakraborty team image with new professional headshot",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Replace Barnali Chakraborty's profile image in the Core Team section with the uploaded 'barnalifounderlatest.png' file, processing it to match the style and dimensions of other team member photos",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1",
+          "msg-5"
+        ],
+        "quotes": [
+          "now i want to change the image of \"Barnali Chakraborty\" with this attached image.. please replace the attached image with existing image",
+          "I'll process it to match the style and dimensions of your other team member photos"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The new image replaces Barnali Chakraborty's current profile image in the CoreTeam component",
+        "Image dimensions and aspect ratio match other team member photos",
+        "Image displays correctly without distortion or pixelation"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement aggressive cache-busting for Barnali Chakraborty's new profile image to ensure the updated image displays immediately without browser caching issues",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "after replacing picture reverify and ensure correct image showing"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Cache-busting strategy applied using timestamp query parameters or unique keys",
+        "Image updates are immediately visible without requiring hard browser refresh",
+        "Implementation matches the cache-busting approach used for other team member images in CoreTeam.tsx"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Deploy the image replacement to draft environment first for verification before pushing to production",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "I'll deploy to draft first so you can confirm everything looks good before pushing to production"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Changes deployed to draft environment successfully",
+        "Draft deployment allows verification of correct image display",
+        "Production deployment only proceeds after draft verification"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use the uploaded filename 'barnalifounderlatest.png' as the source image",
+    "Match the cache-busting implementation pattern already used in CoreTeam.tsx for Antara Banerjee's image (operationleadF-1.png)",
+    "Maintain consistency with existing team member image styling and dimensions"
+  ],
+  "nonGoals": [
+    "Changing other team member images",
+    "Modifying the CoreTeam component layout or structure beyond image replacement",
+    "Adding new team members or removing existing ones"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": [
+      "Crop and resize to match team member photo dimensions with professional headshot framing (barnalifounderlatest.png > barnali-founder.dim_400x400.png)"
+    ]
+  }
+}

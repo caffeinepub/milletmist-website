@@ -1,0 +1,59 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-barnali-chakraborty-s-profile-image-in-the-core-team-section-with-the-uploaded-barnalifounderlatest-png-file-processing-it-to-match-the-style-and-dimensions-of-other-team-member-photos",
+      "featureTitle": "Replace Barnali Chakraborty's profile image in the Core Team section with the uploaded 'barnalifounderlatest.png' file, processing it to match the style and dimensions of other team member photos",
+      "files": [
+        "frontend/src/components/CoreTeam.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-aggressive-cache-busting-for-barnali-chakraborty-s-new-profile-image-to-ensure-the-updated-image-displays-immediately-without-browser-caching-issues",
+      "featureTitle": "Implement aggressive cache-busting for Barnali Chakraborty's new profile image to ensure the updated image displays immediately without browser caching issues",
+      "files": [
+        "frontend/src/components/CoreTeam.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-deploy-the-image-replacement-to-draft-environment-first-for-verification-before-pushing-to-production",
+      "featureTitle": "Deploy the image replacement to draft environment first for verification before pushing to production",
+      "files": [
+        "frontend/src/components/CoreTeam.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
