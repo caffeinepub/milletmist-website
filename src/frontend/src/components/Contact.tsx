@@ -1,26 +1,26 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from "@/components/ui/card";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Visit Us',
-      details: ['#A1402, Chandansar,', 'Virar - 401305, Maharashtra'],
-      link: null
+      title: "Visit Us",
+      details: ["#A1402, Chandansar,", "Virar - 401305, Maharashtra"],
+      link: null,
     },
     {
       icon: Mail,
-      title: 'Email Us',
-      details: ['connect@raavni.com', 'barnali@raavni.com'],
-      link: 'mailto:connect@raavni.com'
+      title: "Email Us",
+      details: ["connect@raavni.com", "barnali@raavni.com"],
+      link: "mailto:connect@raavni.com",
     },
     {
       icon: Phone,
-      title: 'Call Us',
-      details: ['+91 96796 50183'],
-      link: 'tel:+919679650183'
-    }
+      title: "Call Us",
+      details: ["+91 96796 50183"],
+      link: "tel:+919679650183",
+    },
   ];
 
   return (
@@ -32,15 +32,18 @@ const Contact = () => {
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-lg text-foreground/70 leading-relaxed">
-            Have questions about our products or want to learn more about our farmer support initiatives? 
-            We'd love to hear from you.
+            Have questions about our products or want to learn more about our
+            farmer support initiatives? We'd love to hear from you.
           </p>
         </div>
 
         {/* Contact Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {contactInfo.map((info, index) => (
-            <Card key={index} className="border-2 hover:border-primary/50 transition-all hover:shadow-warm">
+          {contactInfo.map((info) => (
+            <Card
+              key={info.title}
+              className="border-2 hover:border-primary/50 transition-all hover:shadow-warm"
+            >
               <CardContent className="p-6 text-center">
                 <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <info.icon className="h-7 w-7 text-primary" />
@@ -48,10 +51,10 @@ const Contact = () => {
                 <h3 className="font-serif text-xl font-bold text-foreground mb-3">
                   {info.title}
                 </h3>
-                {info.details.map((detail, idx) => (
+                {info.details.map((detail, idx) =>
                   info.link && idx === 0 ? (
                     <a
-                      key={idx}
+                      key={detail}
                       href={info.link}
                       className="block text-foreground/70 text-sm hover:text-primary transition-colors"
                     >
@@ -59,18 +62,18 @@ const Contact = () => {
                     </a>
                   ) : info.link && idx === 1 && info.icon === Mail ? (
                     <a
-                      key={idx}
+                      key={detail}
                       href={`mailto:${detail}`}
                       className="block text-foreground/70 text-sm hover:text-primary transition-colors"
                     >
                       {detail}
                     </a>
                   ) : (
-                    <p key={idx} className="text-foreground/70 text-sm">
+                    <p key={detail} className="text-foreground/70 text-sm">
                       {detail}
                     </p>
-                  )
-                ))}
+                  ),
+                )}
               </CardContent>
             </Card>
           ))}
@@ -83,9 +86,10 @@ const Contact = () => {
               Join Our Journey
             </h3>
             <p className="text-foreground/70 leading-relaxed">
-              Whether you're a health-conscious consumer, a potential partner, or someone who shares our 
-              vision for sustainable agriculture and women empowerment, we welcome you to be part of the 
-              Milletmist family.
+              Whether you're a health-conscious consumer, a potential partner,
+              or someone who shares our vision for sustainable agriculture and
+              women empowerment, we welcome you to be part of the Milletmist
+              family.
             </p>
           </div>
         </div>

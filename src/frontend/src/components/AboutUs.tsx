@@ -1,28 +1,32 @@
-import { Users, Award, Target, Sparkles } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from "@/components/ui/card";
+import { Award, Sparkles, Target, Users } from "lucide-react";
 
 const AboutUs = () => {
   const values = [
     {
       icon: Users,
-      title: 'Women Empowerment',
-      description: 'Founded and led entirely by women, we believe in the power of female leadership to create positive change.'
+      title: "Women Empowerment",
+      description:
+        "Founded and led entirely by women, we believe in the power of female leadership to create positive change.",
     },
     {
       icon: Award,
-      title: 'Quality Excellence',
-      description: 'Premium millet-based products crafted with care, ensuring the highest nutritional value and taste.'
+      title: "Quality Excellence",
+      description:
+        "Premium millet-based products crafted with care, ensuring the highest nutritional value and taste.",
     },
     {
       icon: Target,
-      title: 'Social Impact',
-      description: 'Supporting ultra-poor farmers and building sustainable communities through ethical sourcing.'
+      title: "Social Impact",
+      description:
+        "Supporting ultra-poor farmers and building sustainable communities through ethical sourcing.",
     },
     {
       icon: Sparkles,
-      title: 'Natural Goodness',
-      description: 'Pure, wholesome ingredients from nature, free from artificial additives and preservatives.'
-    }
+      title: "Natural Goodness",
+      description:
+        "Pure, wholesome ingredients from nature, free from artificial additives and preservatives.",
+    },
   ];
 
   return (
@@ -34,9 +38,10 @@ const AboutUs = () => {
             About <span className="text-primary">Raavni Agrobyte</span>
           </h2>
           <p className="text-lg text-foreground/70 leading-relaxed">
-            Raavni Agrobyte (OPC) Pvt. Ltd. is a pioneering women-led organization dedicated to 
-            revolutionizing nutrition through the ancient wisdom of millets. Our brand, Milletmist, 
-            represents our commitment to health, sustainability, and community empowerment.
+            Raavni Agrobyte (OPC) Pvt. Ltd. is a pioneering women-led
+            organization dedicated to revolutionizing nutrition through the
+            ancient wisdom of millets. Our brand, Milletmist, represents our
+            commitment to health, sustainability, and community empowerment.
           </p>
         </div>
 
@@ -47,16 +52,19 @@ const AboutUs = () => {
               Powered by Women, For Everyone
             </h3>
             <p className="text-foreground/70 mb-4 leading-relaxed">
-              At the heart of Raavni Agrobyte is an all-women core team of passionate entrepreneurs, 
-              nutritionists, and social change-makers. We believe that when women lead, communities thrive.
+              At the heart of Raavni Agrobyte is an all-women core team of
+              passionate entrepreneurs, nutritionists, and social change-makers.
+              We believe that when women lead, communities thrive.
             </p>
             <p className="text-foreground/70 mb-4 leading-relaxed">
-              Our journey began with a simple vision: to bring the incredible health benefits of millets 
-              to modern consumers while creating sustainable livelihoods for the farmers who grow them.
+              Our journey began with a simple vision: to bring the incredible
+              health benefits of millets to modern consumers while creating
+              sustainable livelihoods for the farmers who grow them.
             </p>
             <p className="text-foreground/70 leading-relaxed">
-              Every Milletmist product is a testament to our commitment to quality, sustainability, and 
-              the empowerment of women and farming communities across India.
+              Every Milletmist product is a testament to our commitment to
+              quality, sustainability, and the empowerment of women and farming
+              communities across India.
             </p>
           </div>
           <div className="order-1 md:order-2">
@@ -72,8 +80,11 @@ const AboutUs = () => {
 
         {/* Values Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((value, index) => (
-            <Card key={index} className="border-2 hover:border-primary/50 transition-all hover:shadow-warm">
+          {values.map((value) => (
+            <Card
+              key={value.title}
+              className="border-2 hover:border-primary/50 transition-all hover:shadow-warm"
+            >
               <CardContent className="p-6">
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <value.icon className="h-6 w-6 text-primary" />

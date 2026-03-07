@@ -1,5 +1,5 @@
-import { ArrowRight, Leaf, Heart } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Heart, Leaf } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -8,7 +8,7 @@ const Hero = () => {
       const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
 
@@ -45,14 +45,17 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-white font-bold mb-8 max-w-2xl mx-auto opacity-0 animate-slide-up [animation-delay:400ms]">
-            Premium Millet Based products crafted with love and care by women, for a healthier you and a sustainable future.
+            Premium Millet Based products crafted with love and care by women,
+            for a healthier you and a sustainable future.
           </p>
 
           {/* Feature Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-10 animate-fade-in [animation-delay:600ms]">
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/80 border-[3px] border-primary">
               <Leaf className="h-5 w-5 text-white" />
-              <span className="text-sm font-medium text-white">100% Natural Millets</span>
+              <span className="text-sm font-medium text-white">
+                100% Natural Millets
+              </span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/80 border-[3px] border-secondary">
               <Heart className="h-5 w-5 text-white" />
@@ -60,7 +63,9 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/80 border-[3px] border-accent">
               <Heart className="h-5 w-5 text-white" />
-              <span className="text-sm font-medium text-white">Farmer Support</span>
+              <span className="text-sm font-medium text-white">
+                Farmer Support
+              </span>
             </div>
           </div>
 
@@ -68,7 +73,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in [animation-delay:800ms]">
             <Button
               size="lg"
-              onClick={() => scrollToSection('products')}
+              onClick={() => scrollToSection("products")}
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-warm text-lg px-8 py-6 rounded-xl cursor-pointer"
             >
               Explore Our Products
@@ -77,7 +82,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection('about')}
+              onClick={() => scrollToSection("about")}
               className="border-2 border-primary text-primary hover:bg-primary/5 text-lg px-8 py-6 rounded-xl cursor-pointer"
             >
               Our Story
