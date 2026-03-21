@@ -32,7 +32,6 @@ const AboutUs = () => {
   return (
     <div className="py-20 md:py-32 gradient-warm">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
             About <span className="text-primary">Raavni Agrobyte</span>
@@ -45,7 +44,6 @@ const AboutUs = () => {
           </p>
         </div>
 
-        {/* Image and Story */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div className="order-2 md:order-1">
             <h3 className="font-serif text-3xl font-bold text-foreground mb-4">
@@ -78,7 +76,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Values Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((value) => (
             <Card

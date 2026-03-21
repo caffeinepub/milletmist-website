@@ -26,7 +26,6 @@ const Contact = () => {
   return (
     <div className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
             Get In <span className="text-primary">Touch</span>
@@ -37,7 +36,6 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Contact Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {contactInfo.map((info) => (
             <Card
@@ -79,7 +77,6 @@ const Contact = () => {
           ))}
         </div>
 
-        {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className="inline-block p-8 rounded-2xl gradient-warm border-2 border-primary/20 max-w-2xl">
             <h3 className="font-serif text-2xl font-bold text-foreground mb-3">

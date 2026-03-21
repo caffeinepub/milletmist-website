@@ -32,7 +32,6 @@ const FarmerSupport = () => {
   return (
     <div className="py-20 md:py-32 gradient-sage">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
             Supporting <span className="text-secondary">Millet Farmers</span>
@@ -44,7 +43,6 @@ const FarmerSupport = () => {
           </p>
         </div>
 
-        {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 md:order-1">
             <div className="rounded-2xl overflow-hidden shadow-sage">
@@ -79,7 +77,6 @@ const FarmerSupport = () => {
           </div>
         </div>
 
-        {/* Impact Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {impacts.map((impact) => (
             <Card
@@ -101,7 +98,6 @@ const FarmerSupport = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="inline-block p-8 rounded-2xl bg-background/50 border-2 border-secondary/20">
             <p className="text-xl font-medium text-foreground mb-2">

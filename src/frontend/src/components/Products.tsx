@@ -36,7 +36,6 @@ const Products = () => {
   return (
     <div className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
             Our <span className="text-primary">Products</span>
@@ -48,7 +47,6 @@ const Products = () => {
           </p>
         </div>
 
-        {/* Products Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-20">
           {products.map((product) => (
             <Card
@@ -95,7 +93,6 @@ const Products = () => {
           ))}
         </div>
 
-        {/* Millet Benefits Section */}
         <div className="gradient-sage rounded-2xl p-8 md:p-12">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">

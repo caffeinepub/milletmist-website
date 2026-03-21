@@ -6,34 +6,23 @@ const CoreTeam = () => {
   const founderImageRef = useRef<HTMLImageElement>(null);
   const productLeadImageRef = useRef<HTMLImageElement>(null);
   const operationsLeadImageRef = useRef<HTMLImageElement>(null);
+  const kumariImageRef = useRef<HTMLImageElement>(null);
 
-  // Force reload founder, product lead, and operations lead images on mount to bypass all caching
   useEffect(() => {
-    if (founderImageRef.current) {
-      const img = founderImageRef.current;
-      const originalSrc = img.src;
-      img.src = "";
-      setTimeout(() => {
-        img.src = originalSrc;
-      }, 10);
-    }
-
-    if (productLeadImageRef.current) {
-      const img = productLeadImageRef.current;
-      const originalSrc = img.src;
-      img.src = "";
-      setTimeout(() => {
-        img.src = originalSrc;
-      }, 10);
-    }
-
-    if (operationsLeadImageRef.current) {
-      const img = operationsLeadImageRef.current;
-      const originalSrc = img.src;
-      img.src = "";
-      setTimeout(() => {
-        img.src = originalSrc;
-      }, 10);
+    for (const ref of [
+      founderImageRef,
+      productLeadImageRef,
+      operationsLeadImageRef,
+      kumariImageRef,
+    ]) {
+      if (ref.current) {
+        const img = ref.current;
+        const originalSrc = img.src;
+        img.src = "";
+        setTimeout(() => {
+          img.src = originalSrc;
+        }, 10);
+      }
     }
   }, []);
 
@@ -41,43 +30,50 @@ const CoreTeam = () => {
     {
       name: "Barnali Chakraborty",
       role: "Founder & CEO",
-      // Updated to latest professional headshot: barnali-founder.dim_400x400.png with timestamp cache-busting
       image: `/assets/generated/barnali-founder.dim_400x400.png?t=${Date.now()}`,
       description:
         "Visionary leader with 10 years in sustainable agriculture and women empowerment initiatives.",
-      isFounder: true,
+      refKey: "founder" as const,
     },
     {
       name: "Antara Banerjee",
       role: "Operations Lead",
-      // v47 version: operationleadF-1.png with timestamp cache-busting
       image: `/assets/operationleadF-1.png?t=${Date.now()}`,
       description:
         "Expert in supply chain management and ethical sourcing, ensuring quality at every step.",
-      isOperationsLead: true,
+      refKey: "operations" as const,
     },
     {
       name: "Madhumita Mallick",
       role: "Product Development Lead",
-      // v46 version: madhumita-product-v46.dim_400x400.png with timestamp cache-busting
       image: `/assets/generated/madhumita-product-v46.dim_400x400.png?t=${Date.now()}`,
       description:
         "Nutritionist and food Expert passionate about creating healthy, delicious millet-based products.",
-      isProductLead: true,
+      refKey: "product" as const,
     },
     {
       name: "Kumari Gayetri",
       role: "Farmer Relations Head",
-      image: "/assets/generated/team-member-4.dim_400x400.png",
+      image: `/assets/uploads/Kumari_gayetri-1.png?t=${Date.now()}`,
       description:
         "Dedicated to building strong partnerships with farming communities and ensuring fair practices.",
+      refKey: "kumari" as const,
     },
   ];
+
+  const getRef = (
+    refKey: "founder" | "operations" | "product" | "kumari" | null,
+  ) => {
+    if (refKey === "founder") return founderImageRef;
+    if (refKey === "operations") return operationsLeadImageRef;
+    if (refKey === "product") return productLeadImageRef;
+    if (refKey === "kumari") return kumariImageRef;
+    return null;
+  };
 
   return (
     <div className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
             Meet Our <span className="text-primary">Core Team</span>
@@ -89,7 +85,6 @@ const CoreTeam = () => {
           </p>
         </div>
 
-        {/* Team Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member) => (
             <Card
@@ -97,19 +92,11 @@ const CoreTeam = () => {
               className="border-2 hover:border-primary/50 transition-all hover:shadow-warm group"
             >
               <CardContent className="p-6">
-                {/* Profile Image - Only render if image exists */}
                 {member.image && (
                   <div className="mb-6 relative overflow-hidden rounded-xl">
                     <img
-                      ref={
-                        member.isFounder
-                          ? founderImageRef
-                          : member.isProductLead
-                            ? productLeadImageRef
-                            : member.isOperationsLead
-                              ? operationsLeadImageRef
-                              : null
-                      }
+                      ref={getRef(member.refKey)}
+                      key={`${member.role}-${Date.now()}`}
                       src={member.image}
                       alt={`${member.name} - ${member.role}`}
                       width={400}
@@ -125,7 +112,6 @@ const CoreTeam = () => {
                   </div>
                 )}
 
-                {/* Member Info */}
                 <div className="text-center">
                   <h3 className="font-serif text-xl font-bold text-foreground mb-1">
                     {member.name}
@@ -137,7 +123,6 @@ const CoreTeam = () => {
                     {member.description}
                   </p>
 
-                  {/* Social Link Placeholder */}
                   <div className="flex justify-center">
                     <button
                       type="button"
@@ -153,7 +138,6 @@ const CoreTeam = () => {
           ))}
         </div>
 
-        {/* Team Statement */}
         <div className="max-w-3xl mx-auto text-center mt-16">
           <div className="bg-primary/5 rounded-2xl p-8 border-2 border-primary/20">
             <p className="text-lg text-foreground/80 leading-relaxed italic">

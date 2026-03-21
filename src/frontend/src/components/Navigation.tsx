@@ -11,7 +11,6 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Update active section based on scroll position
       const sections = [
         "home",
         "about",
@@ -89,8 +88,8 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
               <button
-                key={link.id}
                 type="button"
+                key={link.id}
                 onClick={() => scrollToSection(link.id)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeSection === link.id
@@ -124,8 +123,8 @@ const Navigation = () => {
             <div className="flex flex-col space-y-2">
               {navLinks.map((link) => (
                 <button
-                  key={link.id}
                   type="button"
+                  key={link.id}
                   onClick={() => scrollToSection(link.id)}
                   className={`px-4 py-3 rounded-lg text-left font-medium transition-colors ${
                     activeSection === link.id
